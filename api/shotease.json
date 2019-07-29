@@ -1,0 +1,113 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "karla",
+        "email": "karla@me.com",
+        "password": "karla1"
+      },
+      {
+        "id": 2,
+        "username": "blake",
+        "email": "blake@me.com",
+        "password": "blake1"
+      },
+      {
+        "id": 3,
+        "username": "scott",
+        "email": "scott@me.com",
+        "password": "scott1"
+      },
+      {
+        "id": 4,
+        "username": "adam",
+        "email": "adam@me.com",
+        "password": "adam1"
+      },
+      {
+        "username": "karlitaaaa",
+        "email": "karla@karla.com",
+        "password": "123",
+        "id": 5
+      }
+    ],
+    "news": [
+      {
+        "id": 3,
+        "userId": 1,
+        "title": "Aging Congress Moves Into More Manageable Single-Story Ranch Capitol",
+        "url": "https://politics.theonion.com/aging-congress-moves-into-more-manageable-single-story-1836682443?",
+        "synopsis": "Congress getting older and needing more ADA accessibility and poo",
+        "timeStamp": 1564080020963
+      },
+      {
+        "userId": 1,
+        "title": "Insecure Infant Worried He Unworthy Of Animatronic Toy Rabbit's Love",
+        "url": "https://local.theonion.com/insecure-infant-worried-he-unworthy-of-animatronic-toy-1836682895?",
+        "synopsis": "Kids with toys need therapy",
+        "timeStamp": 1564082425310,
+        "id": 4
+      },
+      {
+        "userId": 1,
+        "title": "Aging Congress Moves Into More Manageable Single-Story Ranch Capitol",
+        "url": "https://politics.theonion.com/aging-congress-moves-into-more-manageable-single-story-1836682443?",
+        "synopsis": "Congress getting older and needing more ADA accessibility and poo",
+        "timeStamp": 1564086237769,
+        "id": 6
+      }
+    ],
+    "events": [
+      {
+        "userId": 1,
+        "title": "adfadsf",
+        "date": "2019-08-03",
+        "location": "",
+        "id": 3
+      },
+      {
+        "userId": 1,
+        "title": "event",
+        "date": "2019-08-03",
+        "location": "asdfasd",
+        "id": 4
+      }
+    ],
+    "messages": [
+      {
+        "id": 2,
+        "userId": 1,
+        "message": "Hi!"
+      },
+      {
+        "id": 3,
+        "userId": 3,
+        "message": "What's up?"
+      },
+      {
+        "id": 4,
+        "userId": 4,
+        "message": "Hey guys!"
+      },
+      {
+        "id": 5,
+        "userId": 1,
+        "message": "How is everyone today?"
+      },
+      {
+        "userId": 4,
+        "message": "Great now you can fix mine!",
+        "id": 7
+      },
+      {
+        "userId": 2,
+        "message": "test",
+        "id": 8
+      },
+      {
+        "userId": 1,
+        "message": "hey",
+        "id": 9
+      }
+    ]
+  }

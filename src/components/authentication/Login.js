@@ -5,7 +5,7 @@ import APIManager from '../../modules/APIManager';
 import Register from "./Register"
 import ShotEaseIcon from "../nav/ShotEaseIcon.png"
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-
+import { Link } from "react-router-dom"
 
 export default class Login extends Component {
 
@@ -39,7 +39,7 @@ export default class Login extends Component {
             }
           })
         } else {
-          alert("Please Fill Out Form 😬!")
+          alert("Please Fill Out Form!")
         }
       }
 
@@ -57,7 +57,7 @@ export default class Login extends Component {
             }
           )
         } else {
-          alert("Please Fill Out Form 😬!")
+          alert("Please Fill Out Form!")
         }
       }
 
@@ -68,7 +68,8 @@ export default class Login extends Component {
           <div><img src ={ShotEaseIcon} className="icon--shot2" alt="task"/></div>
         <Form className="loginForm">
 
-          <h1 className="header">Please sign in</h1>
+          <h2 className="header">Sign in</h2>
+          <br/>
           <FormGroup>
             <Label for="inputUserName">Username</Label>
             <Input
@@ -98,10 +99,26 @@ export default class Login extends Component {
               Remember Me
             </Label>
           </FormGroup>
-          <Button type ="submit" onClick={this.handleLogin}>Sign in</Button>
+          <Button className="sign-in-button" id="button" type ="submit" onClick={this.handleLogin}>Sign in</Button>
+          <br/>
+          <div>
+          <Link className="registerLink" >Don't have an account? Sign Up!</Link>
+          <a href="#" className="register">  </a>
+          </div>
+
           <Register setAuth={this.props.setAuth}/>
         </Form>
         </React.Fragment>
       );
     }
   }
+
+
+  // <div className="card-title">
+  //                       <img src={dog} className="icon--dog" />
+  //                       <h5>{this.props.animal.name}</h5>
+  //                       <Link className="nav-link" to={`/animals/${this.props.animal.id}`}>Details</Link>
+  //                       <a href="#"
+  //                           onClick={() => this.props.deleteAnimal(this.props.animal.id)}
+  //                           className="card-link">Discharge</a>
+  //                   </div>

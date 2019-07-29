@@ -52,7 +52,7 @@ export default class Register extends Component {
             }
           })
         } else {
-          alert("Please Fill Out Form 😬!")
+          alert("Please Fill Out Form!")
         }
       }
 
@@ -63,7 +63,7 @@ export default class Register extends Component {
 
             <section className="createUser">
                 <div>
-                    <Button color="info" onClick={this.toggle}>Register</Button>
+                    <Button color="info" onClick={this.toggle}>Regi</Button>
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                         <ModalHeader toggle={this.toggle}>Register</ModalHeader>
                         <ModalBody>

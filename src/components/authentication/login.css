@@ -11,5 +11,13 @@
 }
 
 .loginForm {
-    width: 450px
+    width: 450px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.sign-in-button {
+  float: right;
 }
