@@ -4,6 +4,7 @@ import "./login.css"
 import APIManager from '../../modules/APIManager';
 import Register from "./Register"
 import ShotEaseIcon from "../nav/ShotEaseIcon.png"
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 
 export default class Login extends Component {
@@ -60,34 +61,47 @@ export default class Login extends Component {
         }
       }
 
-      render() {
-        return (
-          <form className="loginForm">
-            <img src ={ShotEaseIcon} className="icon--shot" alt="task"/>
-            <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
-            <label htmlFor="inputUsername">Username</label>
-            <input
-              onChange={this.handleFieldChange}
-              type="userName"
-              id="userName"
-              placeholder={` username`}
-              required=""
-              autoFocus=""
+
+    render() {
+      return (
+        <React.Fragment>
+          <div><img src ={ShotEaseIcon} className="icon--shot2" alt="task"/></div>
+        <Form className="loginForm">
+
+          <h1 className="header">Please sign in</h1>
+          <FormGroup>
+            <Label for="inputUserName">Username</Label>
+            <Input
+            onChange={this.handleFieldChange}
+            type="userName"
+            name="userName"
+            id="userName"
+            placeholder={` username`}
+            required=""
+            autoFocus=""
             />
-            <hr></hr>
-            <label htmlFor="inputPassword">Password</label>
-            <input
-              onChange={this.handleFieldChange}
-              type="password"
-              id="password"
-              placeholder={` password `}
-              required=""
-            />
-            <button type="submit" onClick={this.handleLogin}>
-              Sign in
-            </button>
-           <Register setAuth={this.props.setAuth}/>
-          </form>
-        )
-      }
+
+          </FormGroup>
+          <FormGroup>
+            <Label for="inputPassword">Password</Label>
+            <Input
+            onChange={this.handleFieldChange}
+            type="password"
+            name="password"
+            id="inputPassword" placeholder={` password `}
+            required=""
+             />
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input type="checkbox" />{' '}
+              Remember Me
+            </Label>
+          </FormGroup>
+          <Button type ="submit" onClick={this.handleLogin}>Sign in</Button>
+          <Register setAuth={this.props.setAuth}/>
+        </Form>
+        </React.Fragment>
+      );
     }
+  }
