@@ -1,0 +1,34 @@
+/* <nav style={{backgroundColor: '#A5D3CD'}} className="navbar  flex-md-nowrap p-0 shadow">
+        <ul className="nav nav-pills nav-fill">
+            <li className="nav-item">
+                <Link className="nav-link" to="/login">Login</Link>
+            </li> */
+
+.navbar {
+ background-Color:#A5D3CD;
+margin-bottom: 100px
+            }
+
+.nav-link {
+    /* color: #DD6359 */
+    color: #3e758a;
+    font-weight: bold;
+    float: right
+
+}
+
+.body {
+    background-Color: #F5F0E2
+}
+
+.icon--shot {
+    width: 50px;
+    height: auto
+}
+
+/* .nav {
+top: 50px;
+right: 0px;
+margin-left: 40em;
+position:
+} */
