@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 import "./login.css"
-// import APIManager from "../../modules/resourceManager/utilities/APIManager"
+//modules/resourceManager/utilities/APIManager"
 import APIManager from '../../modules/APIManager';
 import Register from "./Register"
 import ShotEaseIcon from "../nav/ShotEaseIcon.png"
-
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Link } from "react-router-dom"
 
 export default class Login extends Component {
 
     state = {
         password: "",
-        userName: ""
+        userName: "",
       }
 
       // Update state whenever an input field is edited
@@ -38,7 +39,7 @@ export default class Login extends Component {
             }
           })
         } else {
-          alert("Please Fill Out Form 😬!")
+          alert("Please Fill Out Form!")
         }
       }
 
@@ -56,38 +57,64 @@ export default class Login extends Component {
             }
           )
         } else {
-          alert("Please Fill Out Form 😬!")
+          alert("Please Fill Out Form!")
         }
       }
 
-      render() {
-        return (
-          <form className="loginForm">
-            <img src ={ShotEaseIcon} className="icon--shot" alt="task"/>
-            <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
-            <label htmlFor="inputUsername">Username</label>
-            <input
-              onChange={this.handleFieldChange}
-              type="userName"
-              id="userName"
-              placeholder={` username`}
-              required=""
-              autoFocus=""
+
+    render() {
+      return (
+        <React.Fragment>
+          <div><img src ={ShotEaseIcon} className="icon--shot2" alt="task"/></div>
+        <Form className="loginForm">
+
+          <h2 className="header">Sign in</h2>
+          <br/>
+          <FormGroup>
+            <Label for="inputUserName">Username</Label>
+            <Input
+            onChange={this.handleFieldChange}
+            type="userName"
+            name="userName"
+            id="userName"
+            placeholder={` username`}
+            required=""
+            autoFocus=""
             />
-            <hr></hr>
-            <label htmlFor="inputPassword">Password</label>
-            <input
-              onChange={this.handleFieldChange}
-              type="password"
-              id="password"
-              placeholder={` password `}
-              required=""
-            />
-            <button type="submit" onClick={this.handleLogin}>
-              Sign in
-            </button>
-           <Register setAuth={this.props.setAuth}/>
-          </form>
-        )
-      }
+
+          </FormGroup>
+          <FormGroup>
+            <Label for="inputPassword">Password</Label>
+            <Input
+            onChange={this.handleFieldChange}
+            type="password"
+            name="password"
+            id="inputPassword" placeholder={` password `}
+            required=""
+             />
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input type="checkbox" />{' '}
+              Remember Me
+            </Label>
+          </FormGroup>
+          <Button className="sign-in-button" id="button" type ="submit" onClick={this.handleLogin}>Sign in</Button>
+          <br/>
+
+          <Register setAuth={this.props.setAuth}/>
+        </Form>
+        </React.Fragment>
+      );
     }
+  }
+
+
+  // <div className="card-title">
+  //                       <img src={dog} className="icon--dog" />
+  //                       <h5>{this.props.animal.name}</h5>
+  //                       <Link className="nav-link" to={`/animals/${this.props.animal.id}`}>Details</Link>
+  //                       <a href="#"
+  //                           onClick={() => this.props.deleteAnimal(this.props.animal.id)}
+  //                           className="card-link">Discharge</a>
+  //                   </div>
