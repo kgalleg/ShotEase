@@ -4,6 +4,9 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 // import APIManager from "../../modules/resourceManager/utilities/APIManager"
 import APIManager from '../../modules/APIManager';
 
+
+
+
 export default class Register extends Component {
 
     state = {
@@ -63,7 +66,7 @@ export default class Register extends Component {
 
             <section className="createUser">
                 <div>
-                    <Button color="info" onClick={this.toggle}>Regi</Button>
+                    <Button color="link" onClick={this.toggle}>Don't have an account? Sign Up!</Button>
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                         <ModalHeader toggle={this.toggle}>Register</ModalHeader>
                         <ModalBody>

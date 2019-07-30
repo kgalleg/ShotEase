@@ -101,10 +101,6 @@ export default class Login extends Component {
           </FormGroup>
           <Button className="sign-in-button" id="button" type ="submit" onClick={this.handleLogin}>Sign in</Button>
           <br/>
-          <div>
-          <Link className="registerLink" >Don't have an account? Sign Up!</Link>
-          <a href="#" className="register">  </a>
-          </div>
 
           <Register setAuth={this.props.setAuth}/>
         </Form>
