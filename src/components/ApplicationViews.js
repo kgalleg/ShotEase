@@ -77,7 +77,9 @@ isAuthenticated = () => {
 
                 }} />
                 <Route path="/home" render={(props) => {
-                    return <Home />
+                    //if (this.isAuthenticated()) {
+                    return <Home users={this.state.user} {...props}/>
+                    //}
                 }} />
 
                     <Route path="/login" component={Login} />

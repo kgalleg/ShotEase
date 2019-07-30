@@ -4,7 +4,6 @@ import Register from "./Register"
 import ShotEaseIcon from "../nav/ShotEaseIcon.png"
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { withRouter } from 'react-router'
-// import { Link } from "react-router-dom"
 import APIManager from '../../modules/APIManager';
 
 class Login extends Component {
@@ -12,7 +11,8 @@ class Login extends Component {
     state = {
         username: "",
         password: "",
-        activeUser: +(sessionStorage.getItem("userId"))
+        id: ""
+        // activeUser: +(sessionStorage.getItem("userId"))
       }
 
       handleFieldChange = event => {
@@ -72,7 +72,7 @@ class Login extends Component {
       return (
         <React.Fragment>
           <div><img src ={ShotEaseIcon} className="icon--shot2" alt="task"/></div>
-        <Form className="loginForm">
+        <Form className="loginForm" onSubmit={this.handleLogin}>
 
           <h2 className="header">Sign in</h2>
           <br/>
@@ -82,7 +82,7 @@ class Login extends Component {
             onChange={this.handleFieldChange}
             type="userName"
             name="userName"
-            id="userName"
+            id="username"
             placeholder={` username`}
             required=""
             autoFocus=""
@@ -95,7 +95,7 @@ class Login extends Component {
             onChange={this.handleFieldChange}
             type="password"
             name="password"
-            id="inputPassword" placeholder={` password `}
+            id="password" placeholder={` password `}
             required=""
              />
           </FormGroup>

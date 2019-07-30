@@ -8,10 +8,7 @@ import whiteshot from "./whiteshot.png"
 
 //how to logout? is this right?
 export default class NavBar extends Component {
-  logout = () => {
-    sessionStorage.clear("credentials")
-    this.props.setAuth()
-  }
+ 
 
   render() {
     return (
@@ -29,7 +26,7 @@ export default class NavBar extends Component {
                 <Link className="nav-link" to="/shot">Log Shot</Link>
             </li>
             <li>
-        <Link className="nav-link nav_link_colors" to="/login" onClick={this.logout}>Logout</Link>
+        <Link className="nav-link nav_link_colors" to="/login" onClick={() => sessionStorage.clear()}>Logout</Link>
       </li>
         </ul>
     </nav>

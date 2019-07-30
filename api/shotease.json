@@ -1,129 +1,141 @@
 {
-    "user": [
-      {
-        "id": 1,
-        "username": "karla",
-        "email": "karla@me.com",
-        "password": "karla1"
-      },
-      {
-        "id": 2,
-        "username": "blake",
-        "email": "blake@me.com",
-        "password": "blake1"
-      },
-      {
-        "id": 3,
-        "username": "scott",
-        "email": "scott@me.com",
-        "password": "scott1"
-      },
-      {
-        "id": 4,
-        "username": "adam",
-        "email": "adam@me.com",
-        "password": "adam1"
-      }
-    ],
-    "oneShot": [
-      {
-        "id": 3,
-        "userId": 1,
-        "shotAreaId": 1,
-        "shotSiteId": 1,
-        "medication": "Novolog",
-        "dosage": "2 units",
-        "timeOfShot": "2:00 pm",
-        "dateOfShot": "7-5-2019",
-        "notes": "this shot hurt"
-      },
-      {
-        "id": 3,
-        "userId": 1,
-        "shotAreaId": 1,
-        "shotSiteId": 1,
-        "medication": "Novolog",
-        "dosage": "2 units",
-        "timeOfShot": "2:00 pm",
-        "dateOfShot": "7-5-2019",
-        "notes": "this shot hurt"
-      },
-      {
-        "id": 3,
-        "userId": 1,
-        "shotAreaId": 1,
-        "shotSiteId": 1,
-        "medication": "Novolog",
-        "dosage": "2 units",
-        "timeOfShot": "2:00 pm",
-        "dateOfShot": "7-5-2019",
-        "notes": "this shot hurt"
-      }
-    ],
-    "shotArea": [
-      {
-        "id": 1,
-        "name": "left arm"
-      },
-      {
-        "id": 1,
-        "name": "right thigh"
-      },
-      {
-        "id": 1,
-        "name": "abdomen"
-      }
-    ],
-    "shotSite": [
-      {
-        "id": 2,
-        "shotAreaId": 1,
-        "siteNumber": "Hi!"
-      },
-      {
-        "id": 2,
-        "shotAreaId": 1,
-        "siteNumber": "Hi!"
-      },
-      {
-        "id": 2,
-        "shotAreaId": 1,
-        "siteNumber": "Hi!"
-      },
-      {
-        "id": 2,
-        "shotAreaId": 1,
-        "siteNumber": "Hi!"
-      }
-    ],
-    "guide" : [
-        {
-            "id": 1,
-            "userId": 1,
-            "url": "www.google.com",
-            "name": "name of this",
-            "description": "this is the description"
-        },
-        {
-            "id": 1,
-            "userId": 1,
-            "url": "www.google.com",
-            "name": "name of this",
-            "description": "this is the description"
-        },
-        {
-            "id": 1,
-            "userId": 1,
-            "url": "www.google.com",
-            "name": "name of this",
-            "description": "this is the description"
-        },
-        {
-            "id": 1,
-            "userId": 1,
-            "url": "www.google.com",
-            "name": "name of this",
-            "description": "this is the description"
-        }
-    ]
-  }
+  "user": [
+    {
+      "id": 1,
+      "username": "karla",
+      "email": "karla@me.com",
+      "password": "karla1"
+    },
+    {
+      "id": 2,
+      "username": "blake",
+      "email": "blake@me.com",
+      "password": "blake1"
+    },
+    {
+      "id": 3,
+      "username": "scott",
+      "email": "scott@me.com",
+      "password": "scott1"
+    },
+    {
+      "id": 4,
+      "username": "adam",
+      "email": "adam@me.com",
+      "password": "adam1"
+    },
+    {
+      "username": "karlita",
+      "email": "karlasolis33@gmail.com",
+      "password": "1234",
+      "id": 5
+    },
+    {
+      "username": "karlita",
+      "email": "karlasolis33@gmail.com",
+      "password": "1234",
+      "id": 6
+    }
+  ],
+  "oneShot": [
+    {
+      "id": 3,
+      "userId": 1,
+      "shotAreaId": 1,
+      "shotSiteId": 1,
+      "medication": "Novolog",
+      "dosage": "2 units",
+      "timeOfShot": "2:00 pm",
+      "dateOfShot": "7-5-2019",
+      "notes": "this shot hurt"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "shotAreaId": 1,
+      "shotSiteId": 1,
+      "medication": "Novolog",
+      "dosage": "2 units",
+      "timeOfShot": "2:00 pm",
+      "dateOfShot": "7-5-2019",
+      "notes": "this shot hurt"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "shotAreaId": 1,
+      "shotSiteId": 1,
+      "medication": "Novolog",
+      "dosage": "2 units",
+      "timeOfShot": "2:00 pm",
+      "dateOfShot": "7-5-2019",
+      "notes": "this shot hurt"
+    }
+  ],
+  "shotArea": [
+    {
+      "id": 1,
+      "name": "left arm"
+    },
+    {
+      "id": 1,
+      "name": "right thigh"
+    },
+    {
+      "id": 1,
+      "name": "abdomen"
+    }
+  ],
+  "shotSite": [
+    {
+      "id": 2,
+      "shotAreaId": 1,
+      "siteNumber": "Hi!"
+    },
+    {
+      "id": 2,
+      "shotAreaId": 1,
+      "siteNumber": "Hi!"
+    },
+    {
+      "id": 2,
+      "shotAreaId": 1,
+      "siteNumber": "Hi!"
+    },
+    {
+      "id": 2,
+      "shotAreaId": 1,
+      "siteNumber": "Hi!"
+    }
+  ],
+  "guide": [
+    {
+      "id": 1,
+      "userId": 1,
+      "url": "www.google.com",
+      "name": "name of this",
+      "description": "this is the description"
+    },
+    {
+      "id": 1,
+      "userId": 1,
+      "url": "www.google.com",
+      "name": "name of this",
+      "description": "this is the description"
+    },
+    {
+      "id": 1,
+      "userId": 1,
+      "url": "www.google.com",
+      "name": "name of this",
+      "description": "this is the description"
+    },
+    {
+      "id": 1,
+      "userId": 1,
+      "url": "www.google.com",
+      "name": "name of this",
+      "description": "this is the description"
+    }
+  ]
+}
