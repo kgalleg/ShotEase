@@ -35,6 +35,12 @@
       "email": "karlasolis33@gmail.com",
       "password": "1234",
       "id": 6
+    },
+    {
+      "username": "karla gg",
+      "email": "karla@me.com",
+      "password": "123",
+      "id": 7
     }
   ],
   "oneShot": [

@@ -7,7 +7,7 @@ import APIManager from '../modules/APIManager'
 // import Login from '../components/authentication/Login'
 // import Register from '../components/authentication/Register'
 import Home from './home/Home'
-
+import LogShot from  './logShot/LogShot'
 class ApplicationViews extends Component {
 
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
@@ -72,13 +72,18 @@ isAuthenticated = () => {
                 }} />
                 <Route  path="/register" render={(props) => {
                     if (this.isAuthenticated()) {
-                        return <Register users={this.state.user} addRegisteredUser={this.addRegisteredUser} {...props} />
+                        return <Register users={this.state.user} addRegisteredUser={this.addRegisteredUser} setAuth={this.state.setAuth} {...props} />
                     }
 
                 }} />
                 <Route path="/home" render={(props) => {
                     //if (this.isAuthenticated()) {
                     return <Home users={this.state.user} {...props}/>
+                    //}
+                }} />
+                <Route path="/shot" render={(props) => {
+                    //if (this.isAuthenticated()) {
+                    return <LogShot users={this.state.user} {...props}/>
                     //}
                 }} />
 
