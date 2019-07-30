@@ -1,22 +1,20 @@
 
 import React, { Component } from 'react'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-// import APIManager from "../../modules/resourceManager/utilities/APIManager"
-import APIManager from '../../modules/APIManager';
+import { withRouter } from 'react-router'
+
+// import './register.css'
 
 
 
 
-export default class Register extends Component {
+class Register extends Component {
 
     state = {
         modal: false,
-        userName: "",
+        username: "",
         email: "",
-        password: "",
-        userFirstName: "",
-        userLastName: "",
-
+        password: ""
     }
 
     toggle = () => {
@@ -25,39 +23,42 @@ export default class Register extends Component {
         }));
     }
 
+    handleSignUp = event => {
+        if (this.state.username === "") {
+            alert("Please enter a user name")
+        } else if (this.state.email === "") {
+            alert("Please enter an email address")
+        } else if (this.state.password === "") {
+            alert("Please enter a password")
+        } else if (this.props.users.some(user => {return user.username.toLowerCase() === this.state.username.toLowerCase()})) {
+            alert("User name is already taken")
+            console.log("already taken username")
+        } else if (this.props.users.some(user => {return user.email.toLowerCase() === this.state.email.toLowerCase()})){
+            alert("Email address already exists")
+            console.log("already taken email")
+        }else{
+            const newUserObj = {
+                name: this.state.name,
+                username: this.state.username,
+                password: this.state.password,
+                email: this.state.email
+            }
+            this.props.addRegisteredUser(newUserObj)
+            // .then(() => this.props.history.push('/login'))
+        }
+    }
 
-
-    handleFieldChange = evt => {
+    handleFieldChange = event => {
         const stateToChange = {}
-        stateToChange[evt.target.id] = evt.target.value
+        stateToChange[event.target.id] = event.target.value
         this.setState(stateToChange)
     }
 
-    handleRegister = e => {
-        e.preventDefault()
-        const newUser = {
-            userName: this.state.userName,
-            email: this.state.email,
-            password: this.state.password,
-            userFirstName: this.state.userFirstName,
-            userLastName: this.state.userLastName,
-        }
-        if (this.state.userName && this.state.password && this.state.email && this.state.userFirstName && this.state.userLastName) {
-          APIManager.searchUsername(this.state.userName).then(users => {
-            if (users.length) {
-              alert(`Username ${this.state.userName} already exits!`)
-            } else {
-              APIManager.addUser(newUser).then(user => {
-                sessionStorage.setItem("credentials", parseInt(user.id))
-                this.props.setAuth()
-              })
-              .then(()=> this.toggle())
-            }
-          })
-        } else {
-          alert("Please Fill Out Form!")
-        }
-      }
+    handleGoBack = () => {
+        this.props.history.push('/')
+        //TODO: or this.props.history.push('/login')
+    }
+
 
     render() {
 
@@ -79,8 +80,9 @@ export default class Register extends Component {
                                             type="text"
                                             required
                                             className="form-control"
+                                            value={this.state.username}
                                             onChange={this.handleFieldChange}
-                                            id="userName"
+                                            id="username"
                                             placeholder="username"
                                         />
                                     </div>
@@ -90,42 +92,22 @@ export default class Register extends Component {
                                             type="password"
                                             required
                                             className="form-control"
+                                            value={this.state.password}
                                             onChange={this.handleFieldChange}
                                             id="password"
                                             placeholder="password"
                                         />
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="email">email</label>
+                                        <label htmlFor="email">Email</label>
                                         <input
                                             type="text"
                                             required
                                             className="form-control"
                                             onChange={this.handleFieldChange}
                                             id="email"
+                                            value={this.state.email}
                                             placeholder="email"
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="userFirstName">First Name</label>
-                                        <input
-                                            type="text"
-                                            required
-                                            className="form-control"
-                                            onChange={this.handleFieldChange}
-                                            id="userFirstName"
-                                            placeholder="first name"
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="userLastName">Last Name</label>
-                                        <input
-                                            type="text"
-                                            required
-                                            className="form-control"
-                                            onChange={this.handleFieldChange}
-                                            id="userLastName"
-                                            placeholder="last name"
                                         />
                                     </div>
 
@@ -134,7 +116,7 @@ export default class Register extends Component {
 
                         </ModalBody>
                         <ModalFooter>
-                            <Button color="primary" onClick={this.handleRegister}>Register</Button>
+                            <Button color="primary" onClick={this.handleSignUp}>Register</Button>
 
                             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
                         </ModalFooter>
@@ -144,3 +126,5 @@ export default class Register extends Component {
         )
     }
 }
+
+export default withRouter(Register)
