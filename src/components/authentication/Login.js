@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "./login.css"
-// import APIManager from "../../modules/resourceManager/utilities/APIManager"
+//modules/resourceManager/utilities/APIManager"
 import APIManager from '../../modules/APIManager';
 import Register from "./Register"
 import ShotEaseIcon from "../nav/ShotEaseIcon.png"
@@ -11,7 +11,7 @@ export default class Login extends Component {
 
     state = {
         password: "",
-        userName: ""
+        userName: "",
       }
 
       // Update state whenever an input field is edited

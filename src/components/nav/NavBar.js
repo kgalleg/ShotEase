@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "./navBar.css"
 import ShotEaseIcon from "./ShotEaseIcon.png"
 
+
 export default class NavBar extends Component {
   logout = () => {
     sessionStorage.clear("credentials")

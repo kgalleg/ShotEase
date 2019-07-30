@@ -9,6 +9,8 @@ import APIManager from '../modules/APIManager'
 
 class ApplicationViews extends Component {
 
+    // isAuthenticated = () => sessionStorage.getItem("credentials") !== null
+
     state = {
         user: [],
         oneShot: [],
@@ -16,7 +18,6 @@ class ApplicationViews extends Component {
         shotSite: [],
         guide: []
     }
-
 
     componentDidMount() {
         const newState = {};
@@ -34,13 +35,28 @@ class ApplicationViews extends Component {
       .then(() => this.setState(newState))
   }
 
+//   isAuthenticated = () => {
+//     if (sessionStorage.getItem("userId") !== null) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+
+
 
     render() {
         return (
             <div>
  <React.Fragment>
                 <Route exact path="/" render={(props) => {
-                    return <Login {...props} />
+                    // if (this.isAuthenticated()) {
+                        return <Login users={this.state.users} {...props} />
+                    //}
+                    //  else {
+                    //      return <Redirect to="/" />
+                    //  }
                 }} />
                 <Route path="/login" render={(props) => {
                     // return <Login {...props} />

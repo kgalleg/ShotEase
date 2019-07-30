@@ -3,10 +3,15 @@ const remoteURL = "http://localhost:5002";
 
 export default Object.create(null, {
   //get entry
-  get: {
+  getOne: {
     value: function (resource, id) {
       return fetch(`${remoteURL}/${resource}/${id}`).then(e => e.json());
     }
+    },
+    get: {
+      value: function (id) {
+      return fetch(`${remoteURL}/user/${id}`).then(e => e.json());
+      }
   },
   //get all entries
   all: {
@@ -60,28 +65,26 @@ export default Object.create(null, {
       }).then(data => data.json());
     }
   },
-  newsPut: {
-    value: function (resource, editedAnimal, id) {
-      return fetch(`${remoteURL}/${resource}/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(editedAnimal)
-      }).then(data => data.json());
-    }
+  addUser(obj) {
+    return fetch(`${remoteURL}/users`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(obj)
+    }).then(data => data.json())
   },
-  msgPut: {
-    value: function (resource, editedMsg, id) {
-      return fetch(`${remoteURL}/${resource}/${id}`, {
-        method: "PUT",
-        headers:  {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(editedMsg)
-      }).then(r => r.json())
-    }
+  searchUP(username, password) {
+    return fetch(
+      `${remoteURL}/user?userName=${username}&password=${password}`
+    ).then(e => e.json())
+  },
+  searchUsername(username) {
+    return fetch(`${remoteURL}/user?userName=${username}`).then(e =>
+      e.json()
+    )
   }
+
 });
 
 

@@ -11,6 +11,6 @@ ReactDOM.render(
     <Router>
         <ShotEase />
     </Router>
-    , document.getElementById('root'))
-
+    , document.getElementById('root')
+    )
 
