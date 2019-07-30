@@ -16,23 +16,18 @@ export default class NavBar extends Component {
             <img src ={ShotEaseIcon} className="icon--shot" alt="task"/>
         <ul className="nav">
             <li className="nav-item">
-                <Link className="nav-link" to="/login">Login</Link>
-            </li>
-            <li className="nav-item">
                 <Link className="nav-link" to="/register">Register</Link>
             </li>
-            <li className="nav-item">
-                <Link className="nav-link" to="/messages">Messages</Link>
-            </li>
+
             <li className="nav-item">
                 <Link className="nav-link" to="/tasks">Tasks</Link>
+            </li>
+            <li className="nav-item">
+                <Link className="nav-link" to="/events">Events</Link>
             </li>
             <li>
         <Link className="nav-link nav_link_colors" to="/welcome" onClick={() => this.logoutUser()}>Logout</Link>
       </li>
-            <li className="nav-item">
-                <Link className="nav-link" to="/events">Events</Link>
-            </li>
         </ul>
     </nav>
     )

@@ -8,7 +8,8 @@ export default Object.create(null, {
       return fetch(`${remoteURL}/${resource}/${id}`).then(e => e.json());
     }
   },
-  getAll: {
+  //get all entries
+  all: {
     value: function (resource) {
       return fetch(`${remoteURL}/${resource}`).then(e => e.json());
     }

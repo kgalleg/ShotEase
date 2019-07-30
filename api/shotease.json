@@ -1,5 +1,5 @@
 {
-    "users": [
+    "user": [
       {
         "id": 1,
         "username": "karla",
@@ -23,91 +23,107 @@
         "username": "adam",
         "email": "adam@me.com",
         "password": "adam1"
-      },
-      {
-        "username": "karlitaaaa",
-        "email": "karla@karla.com",
-        "password": "123",
-        "id": 5
       }
     ],
-    "news": [
+    "oneShot": [
       {
         "id": 3,
         "userId": 1,
-        "title": "Aging Congress Moves Into More Manageable Single-Story Ranch Capitol",
-        "url": "https://politics.theonion.com/aging-congress-moves-into-more-manageable-single-story-1836682443?",
-        "synopsis": "Congress getting older and needing more ADA accessibility and poo",
-        "timeStamp": 1564080020963
+        "shotAreaId": 1,
+        "shotSiteId": 1,
+        "medication": "Novolog",
+        "dosage": "2 units",
+        "timeOfShot": "2:00 pm",
+        "dateOfShot": "7-5-2019",
+        "notes": "this shot hurt"
       },
       {
+        "id": 3,
         "userId": 1,
-        "title": "Insecure Infant Worried He Unworthy Of Animatronic Toy Rabbit's Love",
-        "url": "https://local.theonion.com/insecure-infant-worried-he-unworthy-of-animatronic-toy-1836682895?",
-        "synopsis": "Kids with toys need therapy",
-        "timeStamp": 1564082425310,
-        "id": 4
+        "shotAreaId": 1,
+        "shotSiteId": 1,
+        "medication": "Novolog",
+        "dosage": "2 units",
+        "timeOfShot": "2:00 pm",
+        "dateOfShot": "7-5-2019",
+        "notes": "this shot hurt"
       },
       {
+        "id": 3,
         "userId": 1,
-        "title": "Aging Congress Moves Into More Manageable Single-Story Ranch Capitol",
-        "url": "https://politics.theonion.com/aging-congress-moves-into-more-manageable-single-story-1836682443?",
-        "synopsis": "Congress getting older and needing more ADA accessibility and poo",
-        "timeStamp": 1564086237769,
-        "id": 6
+        "shotAreaId": 1,
+        "shotSiteId": 1,
+        "medication": "Novolog",
+        "dosage": "2 units",
+        "timeOfShot": "2:00 pm",
+        "dateOfShot": "7-5-2019",
+        "notes": "this shot hurt"
       }
     ],
-    "events": [
+    "shotArea": [
       {
-        "userId": 1,
-        "title": "adfadsf",
-        "date": "2019-08-03",
-        "location": "",
-        "id": 3
+        "id": 1,
+        "name": "left arm"
       },
       {
-        "userId": 1,
-        "title": "event",
-        "date": "2019-08-03",
-        "location": "asdfasd",
-        "id": 4
+        "id": 1,
+        "name": "right thigh"
+      },
+      {
+        "id": 1,
+        "name": "abdomen"
       }
     ],
-    "messages": [
+    "shotSite": [
       {
         "id": 2,
-        "userId": 1,
-        "message": "Hi!"
+        "shotAreaId": 1,
+        "siteNumber": "Hi!"
       },
       {
-        "id": 3,
-        "userId": 3,
-        "message": "What's up?"
+        "id": 2,
+        "shotAreaId": 1,
+        "siteNumber": "Hi!"
       },
       {
-        "id": 4,
-        "userId": 4,
-        "message": "Hey guys!"
+        "id": 2,
+        "shotAreaId": 1,
+        "siteNumber": "Hi!"
       },
       {
-        "id": 5,
-        "userId": 1,
-        "message": "How is everyone today?"
-      },
-      {
-        "userId": 4,
-        "message": "Great now you can fix mine!",
-        "id": 7
-      },
-      {
-        "userId": 2,
-        "message": "test",
-        "id": 8
-      },
-      {
-        "userId": 1,
-        "message": "hey",
-        "id": 9
+        "id": 2,
+        "shotAreaId": 1,
+        "siteNumber": "Hi!"
       }
+    ],
+    "guide" : [
+        {
+            "id": 1,
+            "userId": 1,
+            "url": "www.google.com",
+            "name": "name of this",
+            "description": "this is the description"
+        },
+        {
+            "id": 1,
+            "userId": 1,
+            "url": "www.google.com",
+            "name": "name of this",
+            "description": "this is the description"
+        },
+        {
+            "id": 1,
+            "userId": 1,
+            "url": "www.google.com",
+            "name": "name of this",
+            "description": "this is the description"
+        },
+        {
+            "id": 1,
+            "userId": 1,
+            "url": "www.google.com",
+            "name": "name of this",
+            "description": "this is the description"
+        }
     ]
   }
