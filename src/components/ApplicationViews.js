@@ -53,6 +53,15 @@ isAuthenticated = () => {
     }
 }
 
+addShot = (shot) =>
+      APIManager.post("oneShot", shot)
+      .then(() => APIManager.all("oneShot"))
+      .then(shots =>
+        this.setState({
+          shots: shots
+        })
+      );
+
 
 
 
@@ -84,6 +93,11 @@ isAuthenticated = () => {
                 <Route path="/shot" render={(props) => {
                     //if (this.isAuthenticated()) {
                     return <LogShot users={this.state.user} {...props}/>
+                    //}
+                }} />
+                <Route path="/shot/new" render={(props) => {
+                    //if (this.isAuthenticated()) {
+                    return <LogShot addShot={this.addShot} {...props}/>
                     //}
                 }} />
 
