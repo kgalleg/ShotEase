@@ -15,8 +15,41 @@ export default class LogShot extends Component {
         medication: "",
         notes: "",
         date: "",
-        time: ""
+        time: "",
+        userId: +(sessionStorage.getItem("credentials"))
     }
+     // Update state whenever an input field is edited
+     handleFieldChange = evt => {
+        const stateToChange = {};
+        stateToChange[evt.target.id] = evt.target.value;
+        this.setState(stateToChange);
+    };
+
+
+    constructNewShot = evt => {
+        // if (this.state.shotSite === "" || this.state.date === "") {
+        //     window.alert("Please fill out all fields!");
+        // } else
+        {
+        evt.preventDefault();
+        const shot = {
+            // modal: false,
+            shotArea: this.state.shotArea,
+            shotSite: this.state.shotSite,
+            medication: this.state.medication,
+            notes: this.state.notes,
+            // date: this.state.date,
+            // time: this.state.time,
+            userId: +(sessionStorage.getItem("credentials"))
+
+        };
+
+        // Create the task and redirect user to home or wherever I add here
+        this.props.addShot(shot)
+            .then(() => this.props.history.push("/home"));
+
+    }
+}
 
 
     toggle = () => {
@@ -93,7 +126,7 @@ export default class LogShot extends Component {
 
                         </ModalBody>
                         <ModalFooter>
-                            <Button color="primary" onClick={this.saveUser}>Log my Shot!</Button>
+                            <Button color="primary" onClick={this.constructNewShot}>Log my Shot!</Button>
 {/* need to change onclick here above*/}
                             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
                         </ModalFooter>
@@ -105,14 +138,3 @@ export default class LogShot extends Component {
     }
 }
 
-
-// <div className="container">
-            //     <img src ={WholeBody} className="image--body" alt="whole body"/>
-            //     <div className="abdomen" onClick={console.log("youclickedme")}></div>
-            //     <div className="rightArm"></div>
-            //     <div className="leftArm"></div>
-            //     <div className="rightHip"></div>
-            //     <div className="leftHip"></div>
-            //     <div className="rightThigh"></div>
-            //     <div className="leftThigh"></div>
-            // </div>

@@ -76,6 +76,14 @@
       "timeOfShot": "2:00 pm",
       "dateOfShot": "7-5-2019",
       "notes": "this shot hurt"
+    },
+    {
+      "shotArea": "Abdomen",
+      "shotSite": "1",
+      "medication": "Novolog",
+      "notes": "kdj",
+      "userId": 0,
+      "id": 4
     }
   ],
   "shotArea": [
