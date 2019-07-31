@@ -6,6 +6,7 @@
   margin-right: auto;
   /* padding-top: 20px;
   padding-bottom: 50px; */
+  /* position: fixed */
   position: relative
 }
 
@@ -24,6 +25,24 @@
                     left: 335px;
 
                     padding: 100px;
-                    background-color:red;
-                    border: 2px solid blue;
+                    /* background-color:lightpink; */
+                    border: 15px solid blue;
                 }
+
+                .image--rightArm {
+                  width: 400px;
+                  height: auto;
+                  margin-left: 31px;
+                  margin-right: 10px;
+
+                }
+
+                .test {
+                  position: absolute;
+                  top: 335px;
+                  left: 335px;
+
+                  padding: 100px;
+                  /* background-color:lightpink; */
+                  border: 15px solid blue;
+              }

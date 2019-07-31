@@ -25,15 +25,15 @@ class ApplicationViews extends Component {
         const newState = {};
 
                  APIManager.all("user")
-      .then(users => (newState.users = users))
+      .then(users => (newState.user = users))
       .then(() => APIManager.all("oneShot"))
-      .then(oneShots => (newState.oneShots = oneShots))
+      .then(oneShots => (newState.oneShot = oneShots))
       .then(() => APIManager.all("shotArea"))
-      .then(shotAreas => (newState.shotAreas = shotAreas))
+      .then(shotAreas => (newState.shotArea = shotAreas))
       .then(() => APIManager.all("shotSite"))
-      .then(shotSites => (newState.shotSites = shotSites))
+      .then(shotSites => (newState.shotSite = shotSites))
       .then(() => APIManager.all("guide"))
-      .then(guides => (newState.guides = guides))
+      .then(guides => (newState.guide = guides))
       .then(() => this.setState(newState))
   }
 
@@ -52,6 +52,15 @@ isAuthenticated = () => {
         return false;
     }
 }
+
+addShot = (shot) =>
+      APIManager.post("oneShot", shot)
+      .then(() => APIManager.all("oneShot"))
+      .then(oneShot =>
+        this.setState({
+            oneShot: oneShot
+        })
+      );
 
 
 
@@ -82,8 +91,14 @@ isAuthenticated = () => {
                     //}
                 }} />
                 <Route path="/shot" render={(props) => {
+                    console.log(this.state.shotArea)
                     //if (this.isAuthenticated()) {
-                    return <LogShot users={this.state.user} {...props}/>
+                    return <LogShot users={this.state.user} addShot={this.addShot} shotAreas={this.state.shotArea}{...props}/>
+                    //}
+                }} />
+                <Route path="/shot/new" render={(props) => {
+                    //if (this.isAuthenticated()) {
+                    return <LogShot addShot={this.addShot} {...props}/>
                     //}
                 }} />
 

@@ -76,20 +76,51 @@
       "timeOfShot": "2:00 pm",
       "dateOfShot": "7-5-2019",
       "notes": "this shot hurt"
+    },
+    {
+      "shotArea": "Abdomen",
+      "shotSite": "1",
+      "medication": "Novolog",
+      "notes": "kdj",
+      "userId": 0,
+      "id": 4
     }
   ],
   "shotArea": [
     {
       "id": 1,
-      "name": "left arm"
+      "name": "backOfRightArm",
+      "imagePath":"src/components/bodyimages/RightArm.jpg"
     },
     {
-      "id": 1,
-      "name": "right thigh"
+      "id": 2,
+      "name": "backOfLeftArm",
+      "imagePath": "src/components/bodyimages/LeftArm.jpg"
     },
     {
-      "id": 1,
-      "name": "abdomen"
+      "id": 3,
+      "name": "abdomen",
+      "imagePath": "src/components/bodyimages/Abdomen.jpg"
+    },
+    {
+      "id": 4,
+      "name": "backOfRightHip",
+      "imagePath": "src/components/bodyimages/RightHip.jpg"
+    },
+    {
+      "id": 5,
+      "name": "backOfLeftHip",
+      "imagePath": "src/components/bodyimages/LeftHip.jpg"
+    },
+    {
+      "id": 6,
+      "name": "rightThigh",
+      "imagePath": "src/components/bodyimages/RightThigh.jpg"
+    },
+    {
+      "id": 7,
+      "name": "leftThigh",
+      "imagePath": "src/components/bodyimages/LeftThigh.jpg"
     }
   ],
   "shotSite": [
