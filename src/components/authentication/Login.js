@@ -1,72 +1,78 @@
 import React, { Component } from 'react'
 import "./login.css"
-//modules/resourceManager/utilities/APIManager"
-import APIManager from '../../modules/APIManager';
 import Register from "./Register"
 import ShotEaseIcon from "../nav/ShotEaseIcon.png"
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import { Link } from "react-router-dom"
+import { withRouter } from 'react-router'
+import APIManager from '../../modules/APIManager';
 
-export default class Login extends Component {
+class Login extends Component {
 
     state = {
+        username: "",
         password: "",
-        userName: "",
+        id: ""
+        // activeUser: +(sessionStorage.getItem("userId"))
       }
 
-      // Update state whenever an input field is edited
-      handleFieldChange = evt => {
+      handleFieldChange = event => {
         const stateToChange = {}
-        stateToChange[evt.target.id] = evt.target.value
+        stateToChange[event.target.id] = event.target.value
         this.setState(stateToChange)
-      }
+    }
 
-      handleRegister = e => {
-        e.preventDefault()
-        const newUser = {
-          userName: this.state.userName,
-          password: this.state.password
-        }
-        if (this.state.userName && this.state.password) {
-          APIManager.searchUsername(this.state.userName).then(users => {
-            if (users.length) {
-              alert(`Username ${this.state.userName} already exits!`)
-            } else {
-              APIManager.addUser(newUser).then(user => {
-                sessionStorage.setItem("credentials", parseInt(user.id))
-                this.props.setAuth()
-              })
-            }
-          })
-        } else {
-          alert("Please Fill Out Form!")
-        }
-      }
-
-      handleLogin = e => {
-        e.preventDefault()
-        if (this.state.userName && this.state.password) {
-          APIManager.searchUP(this.state.userName, this.state.password).then(
-            user => {
-              if (!user.length) {
-                alert("Wrong username or password!")
-              } else {
-                sessionStorage.setItem("credentials", parseInt(user[0].id))
-                this.props.setAuth()
-              }
-            }
+    // this function will do all the verification and checking for the users information matching
+    // and alerts the user if they entered the wrong information
+    handleLogin = event => {
+        event.preventDefault()
+        APIManager.all("user").then(user => {
+          const singleUser = user.find(
+              el => el.username.toLowerCase() === this.state.username.toLowerCase() && el.password.toLowerCase() === this.state.password.toLowerCase()
           )
-        } else {
-          alert("Please Fill Out Form!")
-        }
-      }
+          if (singleUser) {
+              sessionStorage.setItem("credentials", singleUser.id)
+          }
+          this.props.history.push('/home')
+        // set user to a variable and the .find() will return the user that was found, meaning they are a registerd user
+        //
+        // let users = this.props.users.find(user => {
+        //     return user.username === this.state.username.toLowerCase() && user.password === this.state.password
+        // })
 
+        // // checks that all the inputs are not empty and or if the the user enters the correct information
+        // if (this.state.username === "") {
+
+        //     alert("Please enter your username!")
+
+        // } else if (this.state.password === "") {
+        //     alert("Please enter your password!")
+        // } else if (this.state.username === "" && this.state.password === "") {
+        //     alert("Please enter your credentials!")
+        // } else if (user !== undefined) {
+
+        //     // if the user is not undefined, then set the sessionStorage.() and set the state
+        //     this.setState({ activeUser: sessionStorage.setItem("userId", user.id) })
+        //     // console.log(sessionStorage.getItem("userId"))
+        //     this.props.history.push('/login')  // go to to the homepage
+        // } else {
+        //     alert("You've entered the wrong username and/or password")
+        // }
+    })
+  }
+
+
+    handleSignUp = () => {
+        this.props.history.push('/register') // if the user presses the sign up button, then they should be redirected to the register page
+    }
 
     render() {
+        // clear the session from the previous user
+        sessionStorage.clear()
+
       return (
         <React.Fragment>
           <div><img src ={ShotEaseIcon} className="icon--shot2" alt="task"/></div>
-        <Form className="loginForm">
+        <Form className="loginForm" onSubmit={this.handleLogin}>
 
           <h2 className="header">Sign in</h2>
           <br/>
@@ -76,7 +82,7 @@ export default class Login extends Component {
             onChange={this.handleFieldChange}
             type="userName"
             name="userName"
-            id="userName"
+            id="username"
             placeholder={` username`}
             required=""
             autoFocus=""
@@ -89,7 +95,7 @@ export default class Login extends Component {
             onChange={this.handleFieldChange}
             type="password"
             name="password"
-            id="inputPassword" placeholder={` password `}
+            id="password" placeholder={` password `}
             required=""
              />
           </FormGroup>
@@ -99,7 +105,7 @@ export default class Login extends Component {
               Remember Me
             </Label>
           </FormGroup>
-          <Button className="sign-in-button" id="button" type ="submit" onClick={this.handleLogin}>Sign in</Button>
+          <Button className="sign-in-button" type ="submit" onClick={this.handleLogin}>Sign in</Button>
           <br/>
 
           <Register setAuth={this.props.setAuth}/>
@@ -109,12 +115,6 @@ export default class Login extends Component {
     }
   }
 
+  export default withRouter(Login)
 
-  // <div className="card-title">
-  //                       <img src={dog} className="icon--dog" />
-  //                       <h5>{this.props.animal.name}</h5>
-  //                       <Link className="nav-link" to={`/animals/${this.props.animal.id}`}>Details</Link>
-  //                       <a href="#"
-  //                           onClick={() => this.props.deleteAnimal(this.props.animal.id)}
-  //                           className="card-link">Discharge</a>
-  //                   </div>
+

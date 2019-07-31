@@ -1,0 +1,46 @@
+
+
+/* .icon--shot {
+    width: 90px;
+    height: auto
+} */
+
+
+.icon--orange {
+    width: 1245px;
+    height: auto;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+/* .home {
+    background-Color: #DD6359;
+} */
+
+.icon--syringe {
+    width: 250px;
+    height: auto;
+}
+
+.button-area {
+    margin: 10px auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  max-width: 40%;
+
+}
+
+.home-button {
+    color: #3E758A;
+}
