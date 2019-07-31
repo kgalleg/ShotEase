@@ -89,38 +89,38 @@
   "shotArea": [
     {
       "id": 1,
-      "name": "back of right arm",
-      "imagePath":"/Users/kgallegos/workspace/shot-ease/src/components/authentication/Login.js"
+      "name": "backOfRightArm",
+      "imagePath":"src/components/bodyimages/RightArm.jpg"
     },
     {
       "id": 2,
-      "name": "back of left arm",
-      "imagePath": " "
+      "name": "backOfLeftArm",
+      "imagePath": "src/components/bodyimages/LeftArm.jpg"
     },
     {
       "id": 3,
       "name": "abdomen",
-      "imagePath": " "
+      "imagePath": "src/components/bodyimages/Abdomen.jpg"
     },
     {
       "id": 4,
-      "name": "back of right hip",
-      "imagePath": " "
+      "name": "backOfRightHip",
+      "imagePath": "src/components/bodyimages/RightHip.jpg"
     },
     {
       "id": 5,
-      "name": "back of left hip",
-      "imagePath": " "
+      "name": "backOfLeftHip",
+      "imagePath": "src/components/bodyimages/LeftHip.jpg"
     },
     {
       "id": 6,
-      "name": "right thigh",
-      "imagePath": " "
+      "name": "rightThigh",
+      "imagePath": "src/components/bodyimages/RightThigh.jpg"
     },
     {
       "id": 7,
-      "name": "left thigh",
-      "imagePath": " "
+      "name": "leftThigh",
+      "imagePath": "src/components/bodyimages/LeftThigh.jpg"
     }
   ],
   "shotSite": [

@@ -36,3 +36,13 @@
                   margin-right: 10px;
 
                 }
+
+                .test {
+                  position: absolute;
+                  top: 335px;
+                  left: 335px;
+
+                  padding: 100px;
+                  /* background-color:lightpink; */
+                  border: 15px solid blue;
+              }

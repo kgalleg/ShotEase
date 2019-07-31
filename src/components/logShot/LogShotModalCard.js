@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import WholeBody from "./WholeBody.jpg"
+// import WholeBody from "./WholeBody.jpg"
 import "./logShot.css"
-import RightArmCopy from "./RightArmCopy.jpg"
 
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 
-export default class LogShot extends Component {
+export default class LogShotModalCard extends Component {
 
     state = {
         modal: false,
@@ -62,13 +61,13 @@ export default class LogShot extends Component {
         return (
             <section className="ShotSiteLocation">
                 <div>
-                    <div className="bodypartmodal" onClick={this.toggle}>click on me</div>
+                    <div className={this.props.shotArea.name} onClick={this.toggle}>click on me</div>
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                         <ModalHeader toggle={this.toggle}>Record Your Shot</ModalHeader>
                         <ModalBody>
                             <React.Fragment>
-                            <img src ={`${this.props.shotArea.imagePath}`} className="bodypart" alt="a bodypart"/>
-                                <form className="add user">
+                            <img src ={this.props.shotArea.imagePath} className="bodypart" alt="a bodypart"/>
+                                <form className="addOneShot">
 
                                     <div className="form-group">
                                         <label htmlFor="shotArea">Shot Area</label>
