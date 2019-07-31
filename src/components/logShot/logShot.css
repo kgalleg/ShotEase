@@ -25,8 +25,8 @@
                     left: 335px;
 
                     padding: 100px;
-                    background-color:red;
-                    border: 2px solid blue;
+                    /* background-color:lightpink; */
+                    border: 15px solid blue;
                 }
 
                 .image--rightArm {

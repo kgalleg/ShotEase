@@ -89,15 +89,38 @@
   "shotArea": [
     {
       "id": 1,
-      "name": "left arm"
+      "name": "back of right arm",
+      "imagePath":"/Users/kgallegos/workspace/shot-ease/src/components/authentication/Login.js"
     },
     {
-      "id": 1,
-      "name": "right thigh"
+      "id": 2,
+      "name": "back of left arm",
+      "imagePath": " "
     },
     {
-      "id": 1,
-      "name": "abdomen"
+      "id": 3,
+      "name": "abdomen",
+      "imagePath": " "
+    },
+    {
+      "id": 4,
+      "name": "back of right hip",
+      "imagePath": " "
+    },
+    {
+      "id": 5,
+      "name": "back of left hip",
+      "imagePath": " "
+    },
+    {
+      "id": 6,
+      "name": "right thigh",
+      "imagePath": " "
+    },
+    {
+      "id": 7,
+      "name": "left thigh",
+      "imagePath": " "
     }
   ],
   "shotSite": [
