@@ -6,7 +6,8 @@
   margin-right: auto;
   /* padding-top: 20px;
   padding-bottom: 50px; */
-  position: relative
+  position: fixed
+  /* position: relative */
 }
 
 
@@ -26,4 +27,12 @@
                     padding: 100px;
                     background-color:red;
                     border: 2px solid blue;
+                }
+
+                .image--rightArm {
+                  width: 400px;
+                  height: auto;
+                  margin-left: 31px;
+                  margin-right: 10px;
+
                 }

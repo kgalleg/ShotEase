@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import WholeBody from "./WholeBody.jpg"
 import "./logShot.css"
-
+import RightArmCopy from "./RightArmCopy.jpg"
 
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
@@ -36,6 +36,7 @@ export default class LogShot extends Component {
                         <ModalHeader toggle={this.toggle}>Record Your Shot</ModalHeader>
                         <ModalBody>
                             <React.Fragment>
+                            <img src ={RightArmCopy} className="image--rightArm" alt="right arm"/>
                                 <form className="add user">
 
                                     <div className="form-group">
@@ -92,8 +93,8 @@ export default class LogShot extends Component {
 
                         </ModalBody>
                         <ModalFooter>
-                            <Button color="primary" onClick={this.saveUser}>Register</Button>
-
+                            <Button color="primary" onClick={this.saveUser}>Log my Shot!</Button>
+{/* need to change onclick here above*/}
                             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
                         </ModalFooter>
                     </Modal>
