@@ -4,6 +4,7 @@ import "./logShot.css"
 import LogShotModalCard from "./LogShotModalCard"
 
 
+
 export default class LogShot extends Component {
 
     render() {
@@ -14,7 +15,6 @@ export default class LogShot extends Component {
             </div>
 
             <section className="images">
-            {/* <div className="test" onClick={this.toggle}>click on me</div> */}
                 {
                     this.props.shotAreas.map(shotArea =>
                         <LogShotModalCard key={shotArea.id} shotArea={shotArea} {...this.props} />
@@ -27,5 +27,3 @@ export default class LogShot extends Component {
         )
        }
     }
-
-    // key={shotArea.imagePath}

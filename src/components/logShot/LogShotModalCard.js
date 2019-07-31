@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 // import WholeBody from "./WholeBody.jpg"
 import "./logShot.css"
-
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 
@@ -66,7 +65,7 @@ export default class LogShotModalCard extends Component {
                         <ModalHeader toggle={this.toggle}>Record Your Shot</ModalHeader>
                         <ModalBody>
                             <React.Fragment>
-                            <img src ={this.props.shotArea.imagePath} className="bodypart" alt="a bodypart"/>
+                            <img src ={this.props.shotArea.imagePath} className="imageofbodypart" alt="bodypart"/>
                                 <form className="addOneShot">
 
                                     <div className="form-group">

@@ -84,43 +84,51 @@
       "notes": "kdj",
       "userId": 0,
       "id": 4
+    },
+    {
+      "shotArea": "Abdomen",
+      "shotSite": "9",
+      "medication": "Medication",
+      "notes": "haha",
+      "userId": 0,
+      "id": 5
     }
   ],
   "shotArea": [
     {
       "id": 1,
       "name": "backOfRightArm",
-      "imagePath":"src/components/bodyimages/RightArm.jpg"
+      "imagePath": "../bodyimages/RightArm.jpg"
     },
     {
       "id": 2,
       "name": "backOfLeftArm",
-      "imagePath": "src/components/bodyimages/LeftArm.jpg"
+      "imagePath": "../bodyimages/LeftArm.jpg"
     },
     {
       "id": 3,
       "name": "abdomen",
-      "imagePath": "src/components/bodyimages/Abdomen.jpg"
+      "imagePath": "../bodyimages/Abdomen.jpg"
     },
     {
       "id": 4,
       "name": "backOfRightHip",
-      "imagePath": "src/components/bodyimages/RightHip.jpg"
+      "imagePath": "../bodyimages/RightHip.jpg"
     },
     {
       "id": 5,
       "name": "backOfLeftHip",
-      "imagePath": "src/components/bodyimages/LeftHip.jpg"
+      "imagePath": "../bodyimages/LeftHip.jpg"
     },
     {
       "id": 6,
       "name": "rightThigh",
-      "imagePath": "src/components/bodyimages/RightThigh.jpg"
+      "imagePath": "../bodyimages/RightThigh.jpg"
     },
     {
       "id": 7,
       "name": "leftThigh",
-      "imagePath": "src/components/bodyimages/LeftThigh.jpg"
+      "imagePath": "../bodyimages/LeftThigh.jpg"
     }
   ],
   "shotSite": [
