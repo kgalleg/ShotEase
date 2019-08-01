@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import WholeBody from "./WholeBody.jpg"
 import "./logShot.css"
 import LogShotModalCard from "./LogShotModalCard"
-
+import Logo from "./Logo.png"
 
 
 export default class LogShot extends Component {
@@ -11,7 +11,9 @@ export default class LogShot extends Component {
         return (
             <React.Fragment>
             <div className="WholeBody">
-                <img src ={WholeBody} className="image--body" alt="whole body"/>
+
+            <img src ={Logo} className="image--mainLogo" alt="main logo"/>
+            <img src ={WholeBody} className="image--body" alt="whole body"/>
             </div>
 
             <section className="images">

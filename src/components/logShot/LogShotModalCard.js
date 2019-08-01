@@ -65,7 +65,8 @@ export default class LogShotModalCard extends Component {
                         <ModalHeader toggle={this.toggle}>Record Your Shot</ModalHeader>
                         <ModalBody>
                             <React.Fragment>
-                            <img src ={this.props.shotArea.imagePath} className="imageofbodypart" alt="bodypart"/>
+
+                           <div className="testingimage"> <img src ={this.props.shotArea.imagePath} className="imageofbodypart" alt="bodypart"/> </div>
                                 <form className="addOneShot">
 
                                     <div className="form-group">

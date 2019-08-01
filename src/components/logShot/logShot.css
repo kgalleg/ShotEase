@@ -1,14 +1,33 @@
 .image--body {
-  width: 1000px;
-  height: auto;
+  width: auto;
+  height: 1000px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  /* padding-top: 20px;
-  padding-bottom: 50px; */
-  /* position: fixed */
+  /* position: fixed; */
+  position: relative;
+  /* z-index: 1; */
+  /* background-size: cover; */
+
+}
+
+.WholeBody {
   position: relative;
 }
+
+.image--mainLogo {
+  width: 550px;
+  height: auto;
+  padding: 30px 0px 30px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* .testingimage {
+  position: absolute;
+} */
+
 
 /* //this styles all the images inside the modal */
 .imageofbodypart {
@@ -20,60 +39,52 @@
 .abdomen {
   position: absolute;
   top: 430px;
-  left: 600px;
-
-  padding: 70px;
-  /* background-color:lightpink; */
+  left: 595px;
+  padding: 75px 55px 70px 50px;
   border: 10px solid red;
+  /* z-index: 1; */
+
 }
 
 .backOfLeftArm {
   position: absolute;
   top: 320px;
   left: 850px;
-
-  padding: 106px;
-  /* background-color:lightpink; */
+  padding: 100px 80px 100px 80px;
   border: 10px solid green;
 }
 
 .backOfRightArm {
   position: absolute;
   top: 320px;
-  left: 277px;
-
-  padding: 106px;
-  /* background-color:lightpink; */
+  left: 285px;
+  padding: 100px 80px 100px 80px;
   border: 10px solid lightgreen
 }
 
 .backOfRightHip {
   position: absolute;
-  top: 335px;
-  left: 335px;
-
-  padding: 100px;
-  /* background-color:lightpink; */
+  top: 585px;
+  left: 270px;
+  padding: 100px 80px 100px 80px;
   border: 10px solid hotpink;
 }
 
 .backOfLeftHip {
   position: absolute;
-  top: 335px;
-  left: 335px;
+  top: 585px;
+  left: 870px;
+  padding: 100px 80px 100px 80px;
 
-  padding: 100px;
-  /* background-color:lightpink; */
   border: 10px solid lightpink
 }
+/* padding: <padding-top> || <padding-right> || <padding-bottom> || <padding-left> */
 
 .rightThigh {
   position: absolute;
   top: 335px;
   left: 335px;
-
   padding: 100px;
-  /* background-color:lightpink; */
   border: 10px solid lightskyblue;
 }
 
@@ -81,9 +92,7 @@
   position: absolute;
   top: 335px;
   left: 335px;
-
   padding: 100px;
-  /* background-color:lightpink; */
   border: 10px solid blue;
 }
 
