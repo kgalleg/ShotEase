@@ -14,6 +14,8 @@ export default class LogShotModalCard extends Component {
         notes: "",
         date: "",
         time: "",
+        shotAreaId:"",
+        shotSiteId:"",
         userId: +(sessionStorage.getItem("credentials"))
     }
      // Update state whenever an input field is edited
@@ -36,8 +38,10 @@ export default class LogShotModalCard extends Component {
             shotSite: this.state.shotSite,
             medication: this.state.medication,
             notes: this.state.notes,
-            // date: this.state.date,
-            // time: this.state.time,
+            date: this.state.date,
+            time: this.state.time,
+            shotAreaId:parseInt(this.state.shotAreaId),
+            shotSiteId:parseInt(this.state.shotSiteId),
             userId: +(sessionStorage.getItem("credentials"))
 
         };
@@ -91,6 +95,30 @@ export default class LogShotModalCard extends Component {
                                             onChange={this.handleFieldChange}
                                             id="shotSite"
                                             placeholder="shot site"
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="date">Date</label>
+                                        <input
+                                            type="date"
+                                            required
+                                            className="form-control"
+                                            value={this.state.date}
+                                            onChange={this.handleFieldChange}
+                                            id="date"
+                                            placeholder="date"
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="time">Time</label>
+                                        <input
+                                            type="time"
+                                            required
+                                            className="form-control"
+                                            value={this.state.time}
+                                            onChange={this.handleFieldChange}
+                                            id="time"
+                                            placeholder="time"
                                         />
                                     </div>
                                     <div className="form-group">
