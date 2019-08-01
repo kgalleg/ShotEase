@@ -8,6 +8,9 @@ import APIManager from '../modules/APIManager'
 // import Register from '../components/authentication/Register'
 import Home from './home/Home'
 import LogShot from  './logShot/LogShot'
+import HistoryList from './history/HistoryList'
+
+
 class ApplicationViews extends Component {
 
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
@@ -62,6 +65,25 @@ addShot = (shot) =>
         })
       );
 
+      editShot = (editedTaskObject) => {
+        return APIManager.put("oneShot", editedTaskObject)
+          .then(() => APIManager.all("oneShot"))
+          .then(oneShot => {
+            // console.log(oneShot)
+            this.setState({
+                oneShot: oneShot
+            });
+          });
+      };
+
+      deleteShot = (id) => {
+        return APIManager.delete("oneShot", id)
+          .then(() => APIManager.all("oneShot"))
+          .then(oneShot => {
+            // this.props.history.push("/history");
+            this.setState({ oneShot: oneShot });
+          });
+      };
 
 
 
@@ -88,6 +110,11 @@ addShot = (shot) =>
                 <Route path="/home" render={(props) => {
                     //if (this.isAuthenticated()) {
                     return <Home users={this.state.user} {...props}/>
+                    //}
+                }} />
+                <Route path="/history" render={(props) => {
+                    //if (this.isAuthenticated()) {
+                    return <HistoryList oneShot={this.state.oneShot} deleteShot={this.deleteShot} {...props}/>
                     //}
                 }} />
                 <Route path="/shot" render={(props) => {

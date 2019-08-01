@@ -23,88 +23,43 @@
       "username": "adam",
       "email": "adam@me.com",
       "password": "adam1"
-    },
-    {
-      "username": "karlita",
-      "email": "karlasolis33@gmail.com",
-      "password": "1234",
-      "id": 5
-    },
-    {
-      "username": "karlita",
-      "email": "karlasolis33@gmail.com",
-      "password": "1234",
-      "id": 6
-    },
-    {
-      "username": "karla gg",
-      "email": "karla@me.com",
-      "password": "123",
-      "id": 7
-    },
-    {
-      "username": "jayjay",
-      "email": "jay@me.com",
-      "password": "123",
-      "id": 8
     }
   ],
   "oneShot": [
     {
-      "id": 3,
-      "userId": 1,
-      "shotAreaId": 1,
-      "shotSiteId": 1,
-      "medication": "Novolog",
-      "dosage": "2 units",
-      "timeOfShot": "2:00 pm",
-      "dateOfShot": "7-5-2019",
-      "notes": "this shot hurt"
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "shotAreaId": 1,
-      "shotSiteId": 1,
-      "medication": "Novolog",
-      "dosage": "2 units",
-      "timeOfShot": "2:00 pm",
-      "dateOfShot": "7-5-2019",
-      "notes": "this shot hurt"
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "shotAreaId": 1,
-      "shotSiteId": 1,
-      "medication": "Novolog",
-      "dosage": "2 units",
-      "timeOfShot": "2:00 pm",
-      "dateOfShot": "7-5-2019",
-      "notes": "this shot hurt"
-    },
-    {
       "shotArea": "Abdomen",
       "shotSite": "1",
       "medication": "Novolog",
-      "notes": "kdj",
-      "userId": 0,
+      "notes": "Ouch!",
+      "date": "2019-08-01",
+      "time": "13:00",
+      "shotAreaId": null,
+      "shotSiteId": null,
+      "userId": 1,
       "id": 4
     },
     {
       "shotArea": "Abdomen",
-      "shotSite": "9",
-      "medication": "Medication",
-      "notes": "haha",
-      "userId": 0,
+      "shotSite": "1",
+      "medication": "Novolog",
+      "notes": "Ouch!",
+      "date": "2019-08-01",
+      "time": "13:00",
+      "shotAreaId": null,
+      "shotSiteId": null,
+      "userId": 1,
       "id": 5
     },
     {
-      "shotArea": "Upper Right Arm",
+      "shotArea": "Abdomen",
       "shotSite": "1",
       "medication": "Novolog",
-      "notes": "This hurt!",
-      "userId": 0,
+      "notes": "asb",
+      "date": "2019-08-31",
+      "time": "08:14",
+      "shotAreaId": null,
+      "shotSiteId": null,
+      "userId": 1,
       "id": 6
     }
   ],
@@ -112,42 +67,49 @@
     {
       "id": 1,
       "name": "backOfRightArm",
+      "nameOfArea": "back of right arm",
       "imagePath": "../bodyimages/RightArm.jpg"
     },
     {
       "id": 2,
       "name": "backOfLeftArm",
+      "nameOfArea": "back of left arm",
       "imagePath": "../bodyimages/LeftArm.jpg"
     },
     {
       "id": 3,
       "name": "abdomen",
+      "nameOfArea": "abdomen",
       "imagePath": "../bodyimages/Abdomen.jpg"
     },
     {
       "id": 4,
       "name": "backOfRightHip",
+      "nameOfArea": "back of right hip",
       "imagePath": "../bodyimages/RightHip.jpg"
     },
     {
       "id": 5,
       "name": "backOfLeftHip",
+      "nameOfArea": "back of left hip",
       "imagePath": "../bodyimages/LeftHip.jpg"
     },
     {
       "id": 6,
       "name": "rightThigh",
+      "nameOfArea": "right thigh",
       "imagePath": "../bodyimages/RightThigh.jpg"
     },
     {
       "id": 7,
       "name": "leftThigh",
+      "nameOfArea": "left thigh",
       "imagePath": "../bodyimages/LeftThigh.jpg"
     }
   ],
   "shotSite": [
     {
-      "id": 2,
+      "id": 1,
       "shotAreaId": 1,
       "siteNumber": "Hi!"
     },
@@ -157,12 +119,52 @@
       "siteNumber": "Hi!"
     },
     {
-      "id": 2,
+      "id": 3,
       "shotAreaId": 1,
       "siteNumber": "Hi!"
     },
     {
-      "id": 2,
+      "id": 4,
+      "shotAreaId": 1,
+      "siteNumber": "Hi!"
+    },
+    {
+      "id": 5,
+      "shotAreaId": 1,
+      "siteNumber": "Hi!"
+    },
+    {
+      "id": 6,
+      "shotAreaId": 1,
+      "siteNumber": "Hi!"
+    },
+    {
+      "id": 7,
+      "shotAreaId": 1,
+      "siteNumber": "Hi!"
+    },
+    {
+      "id": 8,
+      "shotAreaId": 1,
+      "siteNumber": "Hi!"
+    },
+    {
+      "id": 9,
+      "shotAreaId": 1,
+      "siteNumber": "Hi!"
+    },
+    {
+      "id": 10,
+      "shotAreaId": 1,
+      "siteNumber": "Hi!"
+    },
+    {
+      "id": 11,
+      "shotAreaId": 1,
+      "siteNumber": "Hi!"
+    },
+    {
+      "id": 12,
       "shotAreaId": 1,
       "siteNumber": "Hi!"
     }

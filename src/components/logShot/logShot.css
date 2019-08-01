@@ -59,9 +59,9 @@ margin-right: auto;
 
 .abdomen {
   position: absolute;
-  top: 460px;
+  top: 260px;
   left: 389px;
-  padding: 50px 120px 50px 40px;
+  padding: 100px 120px 190px 40px;
   /* border: 10px solid red; */
   display: inline-block;
   /* z-index: 1; */
