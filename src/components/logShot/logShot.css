@@ -1,19 +1,40 @@
+.WholeBody {
+  position: absolute;
+margin-left: 16%;
+margin-right: auto;
+}
+
+
 .image--body {
   width: auto;
   height: 1000px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  /* display: flex; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  position: relative;
+  /* //absolute works on position */
+/* justify-content: center; */
   /* position: fixed; */
-  position: relative;
-  /* z-index: 1; */
+  z-index: -1;
   /* background-size: cover; */
-
 }
 
-.WholeBody {
-  position: relative;
-}
+
+/* .image--body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+} */
+
+
+/* .WholeBody {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto
+} */
 
 .image--mainLogo {
   width: 550px;
@@ -38,62 +59,62 @@
 
 .abdomen {
   position: absolute;
-  top: 430px;
-  left: 595px;
-  padding: 75px 55px 70px 50px;
-  border: 10px solid red;
+  top: 460px;
+  left: 389px;
+  padding: 50px 120px 50px 40px;
+  /* border: 10px solid red; */
+  display: inline-block;
   /* z-index: 1; */
 
 }
 
 .backOfLeftArm {
   position: absolute;
-  top: 320px;
-  left: 850px;
-  padding: 100px 80px 100px 80px;
-  border: 10px solid green;
+  top: 159px;
+  left: 629px;
+  padding: 100px 150px 124px 80px;
+  /* border: 10px solid green; */
 }
 
 .backOfRightArm {
   position: absolute;
-  top: 320px;
-  left: 285px;
-  padding: 100px 80px 100px 80px;
-  border: 10px solid lightgreen
+  top: 159px;
+  left: 80px;
+  padding: 100px 150px 124px 80px;
+  /* border: 10px solid lightgreen */
 }
 
 .backOfRightHip {
   position: absolute;
-  top: 585px;
-  left: 270px;
-  padding: 100px 80px 100px 80px;
-  border: 10px solid hotpink;
+  top: 404px;
+  left: 75px;
+  padding: 100px 150px 124px 80px;
+  /* border: 10px solid hotpink; */
 }
 
 .backOfLeftHip {
   position: absolute;
-  top: 585px;
-  left: 870px;
-  padding: 100px 80px 100px 80px;
-
-  border: 10px solid lightpink
+  top: 404px;
+  left: 650px;
+  padding: 100px 150px 125px 80px;
+  /* border: 10px solid lightpink */
 }
 /* padding: <padding-top> || <padding-right> || <padding-bottom> || <padding-left> */
 
 .rightThigh {
   position: absolute;
-  top: 335px;
-  left: 335px;
-  padding: 100px;
-  border: 10px solid lightskyblue;
+  top: 650px;
+  left: 135px;
+  padding: 100px 150px 125px 80px;
+  /* border: 10px solid lightskyblue; */
 }
 
 .leftThigh {
   position: absolute;
-  top: 335px;
-  left: 335px;
-  padding: 100px;
-  border: 10px solid blue;
+  top: 650px;
+  left: 580px;
+  padding: 100px 150px 124px 80px;
+  /* border: 10px solid blue; */
 }
 
 

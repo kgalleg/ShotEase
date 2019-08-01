@@ -60,7 +60,7 @@ export default class LogShotModalCard extends Component {
         return (
             <section className="ShotSiteLocation">
                 <div>
-                    <div className={this.props.shotArea.name} onClick={this.toggle}>click on me</div>
+                    <div className={this.props.shotArea.name} onClick={this.toggle}></div>
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                         <ModalHeader toggle={this.toggle}>Record Your Shot</ModalHeader>
                         <ModalBody>

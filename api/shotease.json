@@ -98,6 +98,14 @@
       "notes": "haha",
       "userId": 0,
       "id": 5
+    },
+    {
+      "shotArea": "Upper Right Arm",
+      "shotSite": "1",
+      "medication": "Novolog",
+      "notes": "This hurt!",
+      "userId": 0,
+      "id": 6
     }
   ],
   "shotArea": [

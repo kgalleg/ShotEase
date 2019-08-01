@@ -14,7 +14,7 @@ export default class LogShot extends Component {
 
             <img src ={Logo} className="image--mainLogo" alt="main logo"/>
             <img src ={WholeBody} className="image--body" alt="whole body"/>
-            </div>
+
 
             <section className="images">
                 {
@@ -23,6 +23,7 @@ export default class LogShot extends Component {
                     )
                 }
                 </section>
+                </div>
                 </React.Fragment>
 
 
