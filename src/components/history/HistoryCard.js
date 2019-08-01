@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import SyringeBlue from "./SyringeBlue.png"
+import "./historycard.css"
 
 export default class HistoryCard extends Component {
     render() {
@@ -8,6 +10,7 @@ export default class HistoryCard extends Component {
       <div key={this.props.singleShot.id} className="history-card">
         <div className="card-body-history">
           <div className="card-title-history">
+          <img src ={SyringeBlue} className="syringeBlue" alt="syringe"/>
             <p>{this.props.singleShot.shotArea}</p>
             {/* <Link className="nav-link" to={this.props.article.url}>Article Link</Link> */}
             <p>Shot Site: {this.props.singleShot.shotSite}</p>
