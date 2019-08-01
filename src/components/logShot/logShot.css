@@ -1,48 +1,121 @@
-.image--body {
-    width: 1000px;
-    height: auto;
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /* padding-top: 20px;
-  padding-bottom: 50px; */
-  /* position: fixed */
-  position: relative
+.WholeBody {
+  position: absolute;
+margin-left: 16%;
+margin-right: auto;
 }
 
 
-/* className="abdomen"></div>
-                <div className="rightArm"></div>
-                <div className="leftArm"></div>
-                <div className="rightHip"></div>
-                <div className="leftHip"></div>
-                <div className="rightThigh"></div>
-                <div className="leftThigh"></div> */
+.image--body {
+  width: auto;
+  height: 1000px;
+  /* display: flex; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  position: relative;
+  /* //absolute works on position */
+/* justify-content: center; */
+  /* position: fixed; */
+  z-index: -1;
+  /* background-size: cover; */
+}
 
-                .abdomen {
-                    position: absolute;
-                    top: 335px;
-                    left: 335px;
 
-                    padding: 100px;
-                    /* background-color:lightpink; */
-                    border: 15px solid blue;
-                }
+/* .image--body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+} */
 
-                .image--rightArm {
-                  width: 400px;
-                  height: auto;
-                  margin-left: 31px;
-                  margin-right: 10px;
 
-                }
+/* .WholeBody {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto
+} */
 
-                .test {
-                  position: absolute;
-                  top: 335px;
-                  left: 335px;
+.image--mainLogo {
+  width: 550px;
+  height: auto;
+  padding: 30px 0px 30px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 
-                  padding: 100px;
-                  /* background-color:lightpink; */
-                  border: 15px solid blue;
-              }
+/* .testingimage {
+  position: absolute;
+} */
+
+
+/* //this styles all the images inside the modal */
+.imageofbodypart {
+  width: 450px;
+  height: auto;
+  padding-left: 17px;
+}
+
+.abdomen {
+  position: absolute;
+  top: 460px;
+  left: 389px;
+  padding: 50px 120px 50px 40px;
+  /* border: 10px solid red; */
+  display: inline-block;
+  /* z-index: 1; */
+
+}
+
+.backOfLeftArm {
+  position: absolute;
+  top: 159px;
+  left: 629px;
+  padding: 100px 150px 124px 80px;
+  /* border: 10px solid green; */
+}
+
+.backOfRightArm {
+  position: absolute;
+  top: 159px;
+  left: 80px;
+  padding: 100px 150px 124px 80px;
+  /* border: 10px solid lightgreen */
+}
+
+.backOfRightHip {
+  position: absolute;
+  top: 404px;
+  left: 75px;
+  padding: 100px 150px 124px 80px;
+  /* border: 10px solid hotpink; */
+}
+
+.backOfLeftHip {
+  position: absolute;
+  top: 404px;
+  left: 650px;
+  padding: 100px 150px 125px 80px;
+  /* border: 10px solid lightpink */
+}
+/* padding: <padding-top> || <padding-right> || <padding-bottom> || <padding-left> */
+
+.rightThigh {
+  position: absolute;
+  top: 650px;
+  left: 135px;
+  padding: 100px 150px 125px 80px;
+  /* border: 10px solid lightskyblue; */
+}
+
+.leftThigh {
+  position: absolute;
+  top: 650px;
+  left: 580px;
+  padding: 100px 150px 124px 80px;
+  /* border: 10px solid blue; */
+}
+
+
+
