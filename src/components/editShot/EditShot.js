@@ -111,7 +111,7 @@ componentWillReceiveProps() {
                                             className="form-control"
                                             value={this.state.shotAreaId}
                                             onChange={this.handleFieldChange}
-                                            id="shotArea"
+                                            id="shotAreaId"
 
                                         />
                                     </div>
@@ -123,10 +123,36 @@ componentWillReceiveProps() {
                                             className="form-control"
                                             value={this.state.shotSiteId}
                                             onChange={this.handleFieldChange}
-                                            id="shotSite"
+                                            id="shotSiteId"
 
                                         />
                                     </div>
+                                    {/* <div className="form-group">
+                                        <label htmlFor="shotSite">Shot Site</label>
+                                        <select
+                                            value={this.state.shotSiteId}
+
+                                            className="form-control"
+                                            // value={this.state.shotSite}
+                                            onChange={this.handleFieldChange}
+                                            id="shotSiteId"
+                                            // placeholder="shot site"
+                                        >
+                                            <option value="">Select shot site number</option>
+                                        {this.props.shotSites.map(s => (
+                                          <option key={s.id} id={s.id} {...this.props} value = {s.id}>
+                                              {s.siteNumber}
+
+
+                                          </option>
+                                        ))}
+                                        </select>
+
+                                    </div> */}
+
+
+
+
                                     <div className="form-group">
                                         <label htmlFor="date">Date</label>
                                         <input

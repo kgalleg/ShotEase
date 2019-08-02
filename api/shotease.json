@@ -29,16 +29,6 @@
     {
       "shotAreaId": "4",
       "shotSiteId": "3",
-      "medication": "Meds",
-      "notes": "heeeeeey its 10:58am",
-      "date": "",
-      "time": "",
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "shotAreaId": "4",
-      "shotSiteId": "3",
       "medication": "Novolog",
       "notes": "heeeeeey its 10:58am",
       "date": "",
@@ -55,49 +45,59 @@
       "time": "",
       "userId": 1,
       "id": 3
+    },
+    {
+      "shotAreaId": "3",
+      "shotSiteId": "3",
+      "medication": "",
+      "notes": "its 1:48pm",
+      "date": "2019-08-16",
+      "time": "",
+      "userId": 1,
+      "id": 4
     }
   ],
   "shotArea": [
     {
       "id": 1,
-      "name": "backOfRightArm",
-      "nameOfArea": "back of right arm",
-      "imagePath": "../bodyimages/RightArm.jpg"
+      "name": "abdomen",
+      "nameOfArea": "Abdomen",
+      "imagePath": "../bodyimages/Abdomen.jpg"
     },
     {
       "id": 2,
-      "name": "backOfLeftArm",
-      "nameOfArea": "back of left arm",
-      "imagePath": "../bodyimages/LeftArm.jpg"
+      "name": "backOfRightArm",
+      "nameOfArea": "Back of Right Arm",
+      "imagePath": "../bodyimages/RightArm.jpg"
     },
     {
       "id": 3,
-      "name": "abdomen",
-      "nameOfArea": "abdomen",
-      "imagePath": "../bodyimages/Abdomen.jpg"
+      "name": "backOfLeftArm",
+      "nameOfArea": "Back of Left Arm",
+      "imagePath": "../bodyimages/LeftArm.jpg"
     },
     {
       "id": 4,
       "name": "backOfRightHip",
-      "nameOfArea": "back of right hip",
+      "nameOfArea": "Back of Right Hip",
       "imagePath": "../bodyimages/RightHip.jpg"
     },
     {
       "id": 5,
       "name": "backOfLeftHip",
-      "nameOfArea": "back of left hip",
+      "nameOfArea": "Back of Left Hip",
       "imagePath": "../bodyimages/LeftHip.jpg"
     },
     {
       "id": 6,
       "name": "rightThigh",
-      "nameOfArea": "right thigh",
+      "nameOfArea": "Right Thigh",
       "imagePath": "../bodyimages/RightThigh.jpg"
     },
     {
       "id": 7,
       "name": "leftThigh",
-      "nameOfArea": "left thigh",
+      "nameOfArea": "Left Thigh",
       "imagePath": "../bodyimages/LeftThigh.jpg"
     }
   ],

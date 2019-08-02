@@ -69,16 +69,19 @@ export default Object.create(null, {
       body: JSON.stringify(obj)
     }).then(data => data.json())
   },
-  searchUP(username, password) {
-    return fetch(
-      `${remoteURL}/user?userName=${username}&password=${password}`
-    ).then(e => e.json())
+  // searchUP(username, password) {
+  //   return fetch(
+  //     `${remoteURL}/user?userName=${username}&password=${password}`
+  //   ).then(e => e.json())
+  // },
+  // searchUsername(username) {
+  //   return fetch(`${remoteURL}/user?userName=${username}`).then(e =>
+  //     e.json()
+  //   )
+  // },
+  getExpand(resource, expand) {
+    return fetch(`${remoteURL}/${resource}?_expand=${expand}`).then(data => data.json());
   },
-  searchUsername(username) {
-    return fetch(`${remoteURL}/user?userName=${username}`).then(e =>
-      e.json()
-    )
-  }
 
 });
 

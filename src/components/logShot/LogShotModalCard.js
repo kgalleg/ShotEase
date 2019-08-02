@@ -77,19 +77,18 @@ export default class LogShotModalCard extends Component {
                                     <div className="form-group">
                                         <label htmlFor="shotArea">Shot Area</label>
                                         <select
-                                        defaultValue=""
-                                        name="shotArea"
+                                        // defaultValue=""
+                                            name="shotArea"
                                             className="form-control"
-                                            // value={this.state.shotArea}
+                                            value={this.props.shotArea.id}
                                             onChange={this.handleFieldChange}
                                             id="shotArea"
-
+                                            disabled
                                         >
                                         <option value="">Select shot area</option>
                                         {this.props.shotAreas.map(s => (
                                           <option key={s.id} id={s.id} {...this.props} value = {s.id}>
                                               {s.nameOfArea}
-
 
                                           </option>
                                         ))}
@@ -119,11 +118,9 @@ export default class LogShotModalCard extends Component {
                                         ))}
                                         </select>
 
-
-
-
-
                                     </div>
+
+
                                     <div className="form-group">
                                         <label htmlFor="date">Date</label>
                                         <input
