@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import "./login.css"
 import Register from "./Register"
 import ShotEaseIcon from "../nav/ShotEaseIcon.png"
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { withRouter } from 'react-router'
 import APIManager from '../../modules/APIManager';
 

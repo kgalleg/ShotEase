@@ -36,18 +36,6 @@
       "shotAreaId": null,
       "shotSiteId": null,
       "userId": 1,
-      "id": 4
-    },
-    {
-      "shotArea": "Abdomen",
-      "shotSite": "1",
-      "medication": "Novolog",
-      "notes": "Ouch!",
-      "date": "2019-08-01",
-      "time": "13:00",
-      "shotAreaId": null,
-      "shotSiteId": null,
-      "userId": 1,
       "id": 5
     },
     {

@@ -14,12 +14,12 @@ export default class HistoryCard extends Component {
             <p>{this.props.singleShot.shotArea}</p>
             {/* <Link className="nav-link" to={this.props.article.url}>Article Link</Link> */}
             <p>Shot Site: {this.props.singleShot.shotSite}</p>
-            <p>Shot Area: {this.props.singleShot.medication}</p>
+            <p>Medication:{this.props.singleShot.medication}</p>
             <button
               type="button"
               className="btn btn-success"
               onClick={() => {
-                this.props.history.push(`/history/${this.props.history.id}/edit`);
+                this.props.history.push(`/history/${this.props.singleShot.id}/edit`);
               }}
             >
               Edit
@@ -29,9 +29,7 @@ export default class HistoryCard extends Component {
               className="btn btn-success"
               onClick={() =>
                 this.props.deleteShot(this.props.singleShot.id)}
-                // this.props.history.push("/home");
 
-              className="card-link"
             >
               Delete
             </button>
