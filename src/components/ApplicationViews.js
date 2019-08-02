@@ -9,7 +9,7 @@ import APIManager from '../modules/APIManager'
 import Home from './home/Home'
 import LogShot from  './logShot/LogShot'
 import HistoryList from './history/HistoryList'
-
+import EditShot from './editShot/EditShot'
 
 class ApplicationViews extends Component {
 
@@ -65,7 +65,7 @@ addShot = (shot) =>
         })
       );
 
-      editShot = (editedTaskObject) => {
+      updatedShot = (editedTaskObject) => {
         return APIManager.put("oneShot", editedTaskObject)
           .then(() => APIManager.all("oneShot"))
           .then(oneShot => {
@@ -128,6 +128,20 @@ addShot = (shot) =>
                     return <LogShot addShot={this.addShot} {...props}/>
                     //}
                 }} />
+                <Route
+          exact path="/history/:shotId(\d+)/edit"
+
+          render={props => {
+            return (
+              <EditShot
+                {...props}
+                updatedShot={this.updatedShot}
+                oneShot={this.state.oneShot}
+                singleShot={this.state.singleShot}
+              />
+            );
+          }}
+        />
 
                     <Route path="/login" component={Login} />
             </React.Fragment>

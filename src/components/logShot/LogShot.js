@@ -17,7 +17,7 @@ export default class LogShot extends Component {
 
 
             <section className="images">
-                {
+            {
                     this.props.shotAreas.map(shotArea =>
                         <LogShotModalCard key={shotArea.id} shotArea={shotArea} {...this.props} />
                     )
