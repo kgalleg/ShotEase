@@ -117,5 +117,14 @@ margin-right: auto;
   /* border: 10px solid blue; */
 }
 
+.modal-dialog {
+  min-width: 800px !important;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: space-around;
+}
+
 
 

@@ -115,6 +115,7 @@ addShot = (shot) =>
                     return <HistoryList oneShot={this.state.oneShot} deleteShot={this.deleteShot} shotSites={this.state.shotSite} shotAreas={this.state.shotArea}  {...props}/>
                     //}
                 }} />
+            
                 <Route path="/shot" render={(props) => {
                     console.log(this.state.shotArea)
                     //if (this.isAuthenticated()) {
