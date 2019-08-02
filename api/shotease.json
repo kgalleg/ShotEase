@@ -30,18 +30,6 @@
       "shotArea": "Abdomen",
       "shotSite": "1",
       "medication": "Novolog",
-      "notes": "Ouch!",
-      "date": "2019-08-01",
-      "time": "13:00",
-      "shotAreaId": null,
-      "shotSiteId": null,
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "shotArea": "Abdomen",
-      "shotSite": "1",
-      "medication": "Novolog",
       "notes": "asb",
       "date": "2019-08-31",
       "time": "08:14",
@@ -49,6 +37,30 @@
       "shotSiteId": null,
       "userId": 1,
       "id": 6
+    },
+    {
+      "shotArea": "Right Arm",
+      "shotSite": "3",
+      "medication": "Novolog",
+      "notes": "hi!",
+      "date": "2019-08-15",
+      "time": "12:30",
+      "shotAreaId": null,
+      "shotSiteId": null,
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "shotArea": "Upper Left Hip",
+      "shotSite": "6",
+      "medication": "Novolog",
+      "notes": "Ouch! ",
+      "date": "2019-08-05",
+      "time": "12:45",
+      "shotAreaId": null,
+      "shotSiteId": null,
+      "userId": 1,
+      "id": 8
     }
   ],
   "shotArea": [
