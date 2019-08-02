@@ -34,7 +34,7 @@ class EditShot extends Component {
         evt.preventDefault();
         const shot = {
             // modal: false,
-            id: parseInt(this.props.match.params.shotId),
+            id: this.props.singleShot.id,
             shotArea: this.state.shotArea,
             shotSite: this.state.shotSite,
             medication: this.state.medication,
@@ -53,8 +53,12 @@ class EditShot extends Component {
 
     // }
 }
+myProps = this.props.singleShot
 componentDidMount() {
-    APIManager.get("oneShot", this.props.match.params.shotId)
+    if (this.props.singleShot !== undefined){
+    console.log(this.props.singleShot)
+    console.log("The edit component has mounted")
+    APIManager.get("oneShot", this.props.singleShot.id)
         .then(oneShot => {
             this.setState({
             shotArea: oneShot.shotArea,
@@ -68,6 +72,11 @@ componentDidMount() {
             // userId: +(sessionStorage.getItem("credentials"))
             });
         });
+    }
+}
+
+componentWillReceiveProps() {
+
 }
 
 
@@ -78,13 +87,14 @@ componentDidMount() {
     }
 
     render() {
+        console.log("the edit modal has rendered")
         //   console.log(sessionStorage.getItem("credentials"))
         return (
             <section className="ShotSiteLocation">
                 <div>
-                    {/* <div className={this.props.shotArea.name} onClick={this.toggle}> */}
-
-                    {/* </div> */}
+                    <Button  onClick={this.toggle}>
+                    Edit
+                    </Button>
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                         {/* <ModalHeader toggle={this.toggle}>Record Your Shot</ModalHeader> */}
                         <ModalBody>
