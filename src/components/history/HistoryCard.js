@@ -12,10 +12,10 @@ export default class HistoryCard extends Component {
         <div className="card-body-history">
           <div className="card-title-history">
           <img src ={SyringeBlue} className="syringeBlue" alt="syringe"/>
-            <p>{this.props.singleShot.shotArea}</p>
+            <p>{this.props.singleShot.shotAreaId}</p>
             {/* <Link className="nav-link" to={this.props.article.url}>Article Link</Link> */}
-            <p>Shot Site: {this.props.singleShot.shotSite}</p>
-            <p>Medication:{this.props.singleShot.medication}</p>
+            <p>Shot Site: {this.props.singleShot.shotSiteId}</p>
+            <p>Medication: {this.props.singleShot.medication}</p>
             {/* <button
               type="button"
               className="btn btn-success"

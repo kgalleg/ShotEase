@@ -8,14 +8,14 @@ export default class LogShotModalCard extends Component {
 
     state = {
         modal: false,
-        shotArea: "",
-        shotSite: "",
+        shotAreaId: "",
+        shotSiteId: "",
         medication: "",
         notes: "",
         date: "",
         time: "",
-        shotAreaId:"",
-        shotSiteId:"",
+        // shotAreaId:"",
+        // shotSiteId:"",
         userId: +(sessionStorage.getItem("credentials"))
     }
      // Update state whenever an input field is edited
@@ -34,14 +34,14 @@ export default class LogShotModalCard extends Component {
         evt.preventDefault();
         const shot = {
             // modal: false,
-            shotArea: this.state.shotArea,
-            shotSite: this.state.shotSite,
+            shotAreaId: this.state.shotArea,
+            shotSiteId: this.state.shotSite,
             medication: this.state.medication,
             notes: this.state.notes,
             date: this.state.date,
             time: this.state.time,
-            shotAreaId:parseInt(this.state.shotAreaId),
-            shotSiteId:parseInt(this.state.shotSiteId),
+            // shotAreaId:parseInt(this.state.shotAreaId),
+            // shotSiteId:parseInt(this.state.shotSiteId),
             userId: +(sessionStorage.getItem("credentials"))
 
         };
@@ -73,29 +73,56 @@ export default class LogShotModalCard extends Component {
                            <div className="testingimage"> <img src ={this.props.shotArea.imagePath} className="imageofbodypart" alt="bodypart"/> </div>
                                 <form className="addOneShot">
 
+
                                     <div className="form-group">
                                         <label htmlFor="shotArea">Shot Area</label>
-                                        <input
-                                            type="text"
-                                            required
+                                        <select
+                                        defaultValue=""
+                                        name="shotArea"
                                             className="form-control"
-                                            value={this.state.shotArea}
+                                            // value={this.state.shotArea}
                                             onChange={this.handleFieldChange}
                                             id="shotArea"
-                                            placeholder="shot area"
-                                        />
+
+                                        >
+                                        <option value="">Select shot area</option>
+                                        {this.props.shotAreas.map(s => (
+                                          <option key={s.id} id={s.id} {...this.props} value = {s.id}>
+                                              {s.nameOfArea}
+
+
+                                          </option>
+                                        ))}
+                                        </select>
                                     </div>
+
+
+
                                     <div className="form-group">
                                         <label htmlFor="shotSite">Shot Site</label>
-                                        <input
-                                            type="text"
+                                        <select
+                                            defaultValue=""
                                             required
                                             className="form-control"
-                                            value={this.state.shotSite}
+                                            // value={this.state.shotSite}
                                             onChange={this.handleFieldChange}
                                             id="shotSite"
-                                            placeholder="shot site"
-                                        />
+                                            // placeholder="shot site"
+                                        >
+<option value="">Select shot site number</option>
+                                        {this.props.shotSites.map(s => (
+                                          <option key={s.id} id={s.id} {...this.props} value = {s.id}>
+                                              {s.siteNumber}
+
+
+                                          </option>
+                                        ))}
+                                        </select>
+
+
+
+
+
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="date">Date</label>

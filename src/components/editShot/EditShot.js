@@ -8,14 +8,14 @@ class EditShot extends Component {
 
     state = {
         modal: false,
-        shotArea: "",
-        shotSite: "",
+        shotAreaId: "",
+        shotSiteId: "",
         medication: "",
         notes: "",
         date: "",
         time: "",
-        shotAreaId:"",
-        shotSiteId:"",
+        // shotAreaId:"",
+        // shotSiteId:"",
         userId: +(sessionStorage.getItem("credentials"))
     }
      // Update state whenever an input field is edited
@@ -35,14 +35,14 @@ class EditShot extends Component {
         const shot = {
             // modal: false,
             id: this.props.singleShot.id,
-            shotArea: this.state.shotArea,
-            shotSite: this.state.shotSite,
+            shotAreaId: this.state.shotAreaId,
+            shotSiteId: this.state.shotSiteId,
             medication: this.state.medication,
             notes: this.state.notes,
             date: this.state.date,
             time: this.state.time,
-            shotAreaId:parseInt(this.state.shotAreaId),
-            shotSiteId:parseInt(this.state.shotSiteId),
+            // shotAreaId:parseInt(this.state.shotAreaId),
+            // shotSiteId:parseInt(this.state.shotSiteId),
             userId: +(sessionStorage.getItem("credentials"))
 
         };
@@ -61,14 +61,14 @@ componentDidMount() {
     APIManager.get("oneShot", this.props.singleShot.id)
         .then(oneShot => {
             this.setState({
-            shotArea: oneShot.shotArea,
-            shotSite: oneShot.shotSite,
+            shotAreaId: oneShot.shotAreaId,
+            shotSiteId: oneShot.shotSiteId,
             medication: oneShot.medication,
             notes: oneShot.notes,
             date: oneShot.date,
             time: oneShot.time,
-            shotAreaId:parseInt(oneShot.shotAreaId),
-            shotSiteId:parseInt(oneShot.shotSiteId),
+            // shotAreaId:parseInt(oneShot.shotAreaId),
+            // shotSiteId:parseInt(oneShot.shotSiteId),
             // userId: +(sessionStorage.getItem("credentials"))
             });
         });
@@ -109,7 +109,7 @@ componentWillReceiveProps() {
                                             type="text"
                                             required
                                             className="form-control"
-                                            value={this.state.shotArea}
+                                            value={this.state.shotAreaId}
                                             onChange={this.handleFieldChange}
                                             id="shotArea"
 
@@ -121,7 +121,7 @@ componentWillReceiveProps() {
                                             type="text"
                                             required
                                             className="form-control"
-                                            value={this.state.shotSite}
+                                            value={this.state.shotSiteId}
                                             onChange={this.handleFieldChange}
                                             id="shotSite"
 

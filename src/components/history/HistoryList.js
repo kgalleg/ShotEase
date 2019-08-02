@@ -14,7 +14,7 @@ export default class HistoryList extends Component {
                     +(sessionStorage.getItem("credentials"))
                 )
                 .map(singleShot => (
-                  <HistoryCard key={this.props.oneShot.id} singleShot={singleShot} {...this.props} />
+                  <HistoryCard key={this.props.oneShot.id} singleShot={singleShot} {...this.props}/>
                   //...this props is only for history... either remove it or change the oneShot={oneShot} to sigleShot {singleShot}
                 ))}
             </section>

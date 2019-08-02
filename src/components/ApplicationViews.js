@@ -118,12 +118,12 @@ addShot = (shot) =>
                 <Route path="/shot" render={(props) => {
                     console.log(this.state.shotArea)
                     //if (this.isAuthenticated()) {
-                    return <LogShot users={this.state.user} addShot={this.addShot} shotAreas={this.state.shotArea}{...props}/>
+                    return <LogShot users={this.state.user} addShot={this.addShot} shotAreas={this.state.shotArea}shotSites={this.state.shotSite}{...props}/>
                     //}
                 }} />
                 <Route path="/shot/new" render={(props) => {
                     //if (this.isAuthenticated()) {
-                    return <LogShot addShot={this.addShot} {...props}/>
+                    return <LogShot addShot={this.addShot}  {...props}/>
                     //}
                 }} />
                 <Route
@@ -136,6 +136,7 @@ addShot = (shot) =>
                 updatedShot={this.updatedShot}
                 oneShot={this.state.oneShot}
                 singleShot={this.state.singleShot}
+                shotAreas = {this.state.shotArea}
               />
             );
           }}
