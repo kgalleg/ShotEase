@@ -14,6 +14,7 @@ class EditShot extends Component {
         notes: "",
         date: "",
         time: "",
+
         // shotAreaId:"",
         // shotSiteId:"",
         userId: +(sessionStorage.getItem("credentials"))
@@ -26,13 +27,13 @@ class EditShot extends Component {
     };
 
 
-    updatedShot = evt => {
+    updateExistingShot = evt => {
         // if (this.state.shotSite === "" || this.state.date === "") {
         //     window.alert("Please fill out all fields!");
         // } else
         // {
         evt.preventDefault();
-        const shot = {
+        const editedShot = {
             // modal: false,
             id: this.props.singleShot.id,
             shotAreaId: this.state.shotAreaId,
@@ -48,11 +49,11 @@ class EditShot extends Component {
         };
 
         // Create the shot and redirect user to home or wherever I add here
-        this.props.updatedShot(shot)
-            .then(() => this.props.history.push("/home"));
+        this.props.updatedShot(editedShot)
+            //  .then(() => this.props.history.push(`/history/${this.props.match.params.singleShotId}/edit`))
+            this.toggle()}
 
-    // }
-}
+
 myProps = this.props.singleShot
 componentDidMount() {
     if (this.props.singleShot !== undefined){
@@ -207,7 +208,7 @@ componentWillReceiveProps() {
 
                         </ModalBody>
                         <ModalFooter>
-                            <Button type="submit" color="primary" onClick={this.updatedShot}>Submit</Button>
+                            <Button type="submit" color="primary" onClick={this.updateExistingShot}>Submit</Button>
 {/* need to change onclick here above*/}
                             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
                         </ModalFooter>

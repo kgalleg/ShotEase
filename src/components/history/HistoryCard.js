@@ -16,7 +16,7 @@ export default class HistoryCard extends Component {
 
 
 
-          <p>Shot Area Name:{this.props.shotAreas.nameofArea}</p>
+         <p>Shot Area Name:{this.props.shotAreas.nameofArea}</p>
             <p>Shot Area Id: {this.props.singleShot.shotAreaId}</p>
             {/* <Link className="nav-link" to={this.props.article.url}>Article Link</Link> */}
             <p>Shot Site: {this.props.singleShot.shotSiteId}</p>

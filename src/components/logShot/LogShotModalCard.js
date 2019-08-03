@@ -7,7 +7,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 export default class LogShotModalCard extends Component {
 
     state = {
-        modal: false,
+        // modal: false,
         shotAreaId: "",
         shotSiteId: "",
         medication: "",
@@ -78,11 +78,11 @@ export default class LogShotModalCard extends Component {
                                         <label htmlFor="shotArea">Shot Area</label>
                                         <select
                                         // defaultValue=""
-                                            name="shotArea"
+                                            name="shotAreaId"
                                             className="form-control"
                                             value={this.props.shotArea.id}
                                             onChange={this.handleFieldChange}
-                                            id="shotArea"
+                                            id="shotAreaId"
                                             disabled
                                         >
                                         <option value="">Select shot area</option>
