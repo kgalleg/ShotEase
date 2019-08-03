@@ -11,12 +11,18 @@ width: 50%;
 .history-card {
     padding: 20px;
     width: 300px;
-/* maybe do flexbox on these? */
-}
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
 
+}
 /* .card-body-history {
-    background-color: #DD6359;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 } */
+
 
 .deleteButton {
     width: 75px;
@@ -52,7 +58,8 @@ margin-right: 30%
 .card-title-history {
     margin-left: 20px;
     margin-top: 10px;
-    display: inline-block;
+    display:inline-block;
+    /* display:inline-flexbox; */
 
 }
 .myHeader {
@@ -73,6 +80,8 @@ border-radius: 25px;
   /* padding: 20px; */
   /* width: 200px;
   height: 150px; */
+
+
 }
 
 .card-header {

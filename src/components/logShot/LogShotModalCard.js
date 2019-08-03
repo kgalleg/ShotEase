@@ -125,7 +125,7 @@ export default class LogShotModalCard extends Component {
                                         <label htmlFor="date">Date</label>
                                         <input
                                             type="date"
-                                            required
+
                                             className="form-control"
                                             value={this.state.date}
                                             onChange={this.handleFieldChange}
@@ -137,7 +137,6 @@ export default class LogShotModalCard extends Component {
                                         <label htmlFor="time">Time</label>
                                         <input
                                             type="time"
-                                            required
                                             className="form-control"
                                             value={this.state.time}
                                             onChange={this.handleFieldChange}

@@ -5,6 +5,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { withRouter } from 'react-router'
 import APIManager from '../../modules/APIManager';
 
+
 class EditShot extends Component {
 
     state = {
@@ -52,7 +53,7 @@ class EditShot extends Component {
         // Create the shot and redirect user to home or wherever I add here
         this.props.updatedShot(editedShot)
             //  .then(() => this.props.history.push(`/history/${this.props.match.params.singleShotId}/edit`))
-            this.toggle()
+            // this.toggle()
         }
 
 
@@ -171,6 +172,7 @@ componentWillReceiveProps() {
                                         <label htmlFor="date">Date</label>
                                         <input
                                             type="date"
+
                                             required
                                             className="form-control"
                                             value={this.state.date}
@@ -183,12 +185,12 @@ componentWillReceiveProps() {
                                         <label htmlFor="time">Time</label>
                                         <input
                                             type="time"
+
                                             required
                                             className="form-control"
                                             value={this.state.time}
                                             onChange={this.handleFieldChange}
                                             id="time"
-
                                         />
                                     </div>
                                     <div className="form-group">
@@ -221,8 +223,9 @@ componentWillReceiveProps() {
 
                         </ModalBody>
                         <ModalFooter>
-                            <Button type="submit" color="primary" onClick={this.updateExistingShot}>Submit</Button>
-{/* need to change onclick here above*/}
+                            <Button type="submit" color="primary"
+                            onClick={this.updateExistingShot}>Submit</Button>
+
                             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
                         </ModalFooter>
                     </Modal>
