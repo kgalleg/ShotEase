@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 // import "./logShot.css"
+import "../history/historycard.css"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { withRouter } from 'react-router'
 import APIManager from '../../modules/APIManager';
@@ -51,7 +52,8 @@ class EditShot extends Component {
         // Create the shot and redirect user to home or wherever I add here
         this.props.updatedShot(editedShot)
             //  .then(() => this.props.history.push(`/history/${this.props.match.params.singleShotId}/edit`))
-            this.toggle()}
+            this.toggle()
+        }
 
 
 myProps = this.props.singleShot
@@ -87,21 +89,32 @@ componentWillReceiveProps() {
         }));
     }
 
+
     render() {
         console.log("the edit modal has rendered")
+
         //   console.log(sessionStorage.getItem("credentials"))
         return (
             <section className="ShotSiteLocation">
+                {/* <section>
+            {
+                this.props.shotAreas.map(shotArea =>
+                    <li key={shotArea.id} shotArea={shotArea} {...this.props} />
+                )
+            }
+            </section> */}
+
+
                 <div>
-                    <Button  onClick={this.toggle}>
+                    <button  onClick={this.toggle} className="myButton editButton">
                     Edit
-                    </Button>
+                    </button>
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                        {/* <ModalHeader toggle={this.toggle}>Record Your Shot</ModalHeader> */}
+                        <ModalHeader toggle={this.toggle}>Edit your shot</ModalHeader>
                         <ModalBody>
                             <React.Fragment>
 
-                           {/* <div className="testingimage"> <img src ={this.props.shotArea.imagePath} className="imageofbodypart" alt="bodypart"/> </div> */}
+                           {/* <div className="testingimage"> <img src ={this.props.shotAreas.imagePath} className="imageofbodypart" alt="bodypart"/> </div> */}
                                 <form className="addOneShot">
 
                                     <div className="form-group">
@@ -131,10 +144,10 @@ componentWillReceiveProps() {
                                     {/* <div className="form-group">
                                         <label htmlFor="shotSite">Shot Site</label>
                                         <select
-                                            value={this.state.shotSiteId}
+
 
                                             className="form-control"
-                                            // value={this.state.shotSite}
+                                            value={this.state.shotSiteId}
                                             onChange={this.handleFieldChange}
                                             id="shotSiteId"
                                             // placeholder="shot site"

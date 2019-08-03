@@ -34,8 +34,8 @@ export default class LogShotModalCard extends Component {
         evt.preventDefault();
         const shot = {
             // modal: false,
-            shotAreaId: this.state.shotArea,
-            shotSiteId: this.state.shotSite,
+            shotAreaId: this.state.shotAreaId,
+            shotSiteId: this.state.shotSiteId,
             medication: this.state.medication,
             notes: this.state.notes,
             date: this.state.date,
@@ -83,7 +83,7 @@ export default class LogShotModalCard extends Component {
                                             value={this.props.shotArea.id}
                                             onChange={this.handleFieldChange}
                                             id="shotAreaId"
-                                            disabled
+                                            // disabled
                                         >
                                         <option value="">Select shot area</option>
                                         {this.props.shotAreas.map(s => (
@@ -105,7 +105,7 @@ export default class LogShotModalCard extends Component {
                                             className="form-control"
                                             // value={this.state.shotSite}
                                             onChange={this.handleFieldChange}
-                                            id="shotSite"
+                                            id="shotSiteId"
                                             // placeholder="shot site"
                                         >
 <option value="">Select shot site number</option>

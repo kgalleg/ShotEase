@@ -122,18 +122,18 @@ addShot = (shot) =>
                     return <LogShot users={this.state.user} addShot={this.addShot} shotAreas={this.state.shotArea} shotSites={this.state.shotSite} updatedShot={this.updatedShot}{...props}/>
                     //}
                 }} />
-                <Route path="/shot/new" render={(props) => {
+                {/* <Route path="/shot/new" render={(props) => {
                     //if (this.isAuthenticated()) {
                     return <LogShot addShot={this.addShot} updatedShot={this.updatedShot} {...props}/>
                     //}
-                }} />
+                }} /> */}
                 <Route
           exact path="/history/:shotId(\d+)/edit"
 
           render={props => {
             return (
               <EditShot
-
+                users={this.state.user}
                 updatedShot={this.updatedShot}
                 oneShot={this.state.oneShot}
                 shotAreas = {this.state.shotArea}
