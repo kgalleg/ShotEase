@@ -65,7 +65,8 @@ text-align: center;
 .imageofbodypart {
   width: 450px;
   height: auto;
-  padding-left: 17px;
+  /* padding-left: 17px; */
+  border-radius:20px;
 }
 
 .abdomen {

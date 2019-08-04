@@ -117,7 +117,7 @@ componentWillReceiveProps() {
                         <ModalBody>
                             <React.Fragment>
 
-                           {/* <div className="testingimage"> <img src ={this.props.shotAreas.imagePath} className="imageofbodypart" alt="bodypart"/> </div> */}
+                           <div className="testingimage"> <img src ={this.props.shotAreas.imagePath} className="imageofbodypart" alt="bodypart"/> </div>
                                 <form className="addOneShot">
 
                                     <div className="form-group">
