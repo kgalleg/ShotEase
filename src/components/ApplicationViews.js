@@ -4,8 +4,6 @@ import { withRouter } from 'react-router'
 import Login from './authentication/Login'
 import Register from './authentication/Register'
 import APIManager from '../modules/APIManager'
-// import Login from '../components/authentication/Login'
-// import Register from '../components/authentication/Register'
 import Home from './home/Home'
 import LogShot from  './logShot/LogShot'
 import HistoryList from './history/HistoryList'
@@ -69,7 +67,7 @@ addShot = (shot) =>
         return APIManager.put("oneShot", editedTaskObject)
           .then(() => APIManager.all("oneShot"))
           .then(oneShot => {
-            // console.log(oneShot)
+            console.log(oneShot)
             this.setState({
                 oneShot: oneShot
             });
@@ -114,30 +112,33 @@ addShot = (shot) =>
                 }} />
                 <Route path="/history" render={(props) => {
                     //if (this.isAuthenticated()) {
-                    return <HistoryList oneShot={this.state.oneShot} deleteShot={this.deleteShot} {...props}/>
+                    return <HistoryList oneShot={this.state.oneShot} deleteShot={this.deleteShot} shotSites={this.state.shotSite} shotAreas={this.state.shotArea} updatedShot={this.updatedShot} {...props}/>
                     //}
                 }} />
+
                 <Route path="/shot" render={(props) => {
                     console.log(this.state.shotArea)
                     //if (this.isAuthenticated()) {
-                    return <LogShot users={this.state.user} addShot={this.addShot} shotAreas={this.state.shotArea}{...props}/>
+                    return <LogShot users={this.state.user} addShot={this.addShot} shotAreas={this.state.shotArea} shotSites={this.state.shotSite} updatedShot={this.updatedShot}{...props}/>
                     //}
                 }} />
-                <Route path="/shot/new" render={(props) => {
+                {/* <Route path="/shot/new" render={(props) => {
                     //if (this.isAuthenticated()) {
-                    return <LogShot addShot={this.addShot} {...props}/>
+                    return <LogShot addShot={this.addShot} updatedShot={this.updatedShot} {...props}/>
                     //}
-                }} />
+                }} /> */}
                 <Route
           exact path="/history/:shotId(\d+)/edit"
 
           render={props => {
             return (
               <EditShot
-                {...props}
+                users={this.state.user}
                 updatedShot={this.updatedShot}
                 oneShot={this.state.oneShot}
-                singleShot={this.state.singleShot}
+                shotAreas = {this.state.shotArea}
+                shotSites={this.state.shotSite}
+                {...props}
               />
             );
           }}

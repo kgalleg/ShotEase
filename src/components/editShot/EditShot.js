@@ -1,21 +1,24 @@
 import React, { Component } from 'react'
 // import "./logShot.css"
+import "../history/historycard.css"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { withRouter } from 'react-router'
 import APIManager from '../../modules/APIManager';
+
 
 class EditShot extends Component {
 
     state = {
         modal: false,
-        shotArea: "",
-        shotSite: "",
+        shotAreaId: "",
+        shotSiteId: "",
         medication: "",
         notes: "",
         date: "",
         time: "",
-        shotAreaId:"",
-        shotSiteId:"",
+
+        // shotAreaId:"",
+        // shotSiteId:"",
         userId: +(sessionStorage.getItem("credentials"))
     }
      // Update state whenever an input field is edited
@@ -26,48 +29,58 @@ class EditShot extends Component {
     };
 
 
-    updatedShot = evt => {
+    updateExistingShot = evt => {
         // if (this.state.shotSite === "" || this.state.date === "") {
         //     window.alert("Please fill out all fields!");
         // } else
         // {
         evt.preventDefault();
-        const shot = {
+        const editedShot = {
             // modal: false,
-            id: parseInt(this.props.match.params.shotId),
-            shotArea: this.state.shotArea,
-            shotSite: this.state.shotSite,
+            id: this.props.singleShot.id,
+            shotAreaId: this.state.shotAreaId,
+            shotSiteId: this.state.shotSiteId,
             medication: this.state.medication,
             notes: this.state.notes,
             date: this.state.date,
             time: this.state.time,
-            shotAreaId:parseInt(this.state.shotAreaId),
-            shotSiteId:parseInt(this.state.shotSiteId),
+            // shotAreaId:parseInt(this.state.shotAreaId),
+            // shotSiteId:parseInt(this.state.shotSiteId),
             userId: +(sessionStorage.getItem("credentials"))
 
         };
 
         // Create the shot and redirect user to home or wherever I add here
-        this.props.updatedShot(shot)
-            .then(() => this.props.history.push("/home"));
+        this.props.updatedShot(editedShot)
+            //  .then(() => this.props.history.push(`/history/${this.props.match.params.singleShotId}/edit`))
+            // this.toggle()
+        }
 
-    // }
-}
+
+myProps = this.props.singleShot
 componentDidMount() {
-    APIManager.get("oneShot", this.props.match.params.shotId)
+    if (this.props.singleShot !== undefined){
+    console.log(this.props.singleShot)
+    console.log("The edit component has mounted")
+    APIManager.get("oneShot", this.props.singleShot.id)
         .then(oneShot => {
             this.setState({
-            shotArea: oneShot.shotArea,
-            shotSite: oneShot.shotSite,
+            shotAreaId: oneShot.shotAreaId,
+            shotSiteId: oneShot.shotSiteId,
             medication: oneShot.medication,
             notes: oneShot.notes,
             date: oneShot.date,
             time: oneShot.time,
-            shotAreaId:parseInt(oneShot.shotAreaId),
-            shotSiteId:parseInt(oneShot.shotSiteId),
+            // shotAreaId:parseInt(oneShot.shotAreaId),
+            // shotSiteId:parseInt(oneShot.shotSiteId),
             // userId: +(sessionStorage.getItem("credentials"))
             });
         });
+    }
+}
+
+componentWillReceiveProps() {
+
 }
 
 
@@ -77,20 +90,32 @@ componentDidMount() {
         }));
     }
 
+
     render() {
+        console.log("the edit modal has rendered")
+
         //   console.log(sessionStorage.getItem("credentials"))
         return (
             <section className="ShotSiteLocation">
-                <div>
-                    {/* <div className={this.props.shotArea.name} onClick={this.toggle}> */}
+                {/* <section>
+            {
+                this.props.shotAreas.map(shotArea =>
+                    <li key={shotArea.id} shotArea={shotArea} {...this.props} />
+                )
+            }
+            </section> */}
 
-                    {/* </div> */}
+
+                <div>
+                    <button  onClick={this.toggle} className="myButton editButton">
+                    Edit
+                    </button>
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                        {/* <ModalHeader toggle={this.toggle}>Record Your Shot</ModalHeader> */}
+                        <ModalHeader toggle={this.toggle}>Edit your shot</ModalHeader>
                         <ModalBody>
                             <React.Fragment>
 
-                           {/* <div className="testingimage"> <img src ={this.props.shotArea.imagePath} className="imageofbodypart" alt="bodypart"/> </div> */}
+                           {/* <div className="testingimage"> <img src ={this.props.shotAreas.imagePath} className="imageofbodypart" alt="bodypart"/> </div> */}
                                 <form className="addOneShot">
 
                                     <div className="form-group">
@@ -99,9 +124,9 @@ componentDidMount() {
                                             type="text"
                                             required
                                             className="form-control"
-                                            value={this.state.shotArea}
+                                            value={this.state.shotAreaId}
                                             onChange={this.handleFieldChange}
-                                            id="shotArea"
+                                            id="shotAreaId"
 
                                         />
                                     </div>
@@ -111,16 +136,43 @@ componentDidMount() {
                                             type="text"
                                             required
                                             className="form-control"
-                                            value={this.state.shotSite}
+                                            value={this.state.shotSiteId}
                                             onChange={this.handleFieldChange}
-                                            id="shotSite"
+                                            id="shotSiteId"
 
                                         />
                                     </div>
+                                    {/* <div className="form-group">
+                                        <label htmlFor="shotSite">Shot Site</label>
+                                        <select
+
+
+                                            className="form-control"
+                                            value={this.state.shotSiteId}
+                                            onChange={this.handleFieldChange}
+                                            id="shotSiteId"
+                                            // placeholder="shot site"
+                                        >
+                                            <option value="">Select shot site number</option>
+                                        {this.props.shotSites.map(s => (
+                                          <option key={s.id} id={s.id} {...this.props} value = {s.id}>
+                                              {s.siteNumber}
+
+
+                                          </option>
+                                        ))}
+                                        </select>
+
+                                    </div> */}
+
+
+
+
                                     <div className="form-group">
                                         <label htmlFor="date">Date</label>
                                         <input
                                             type="date"
+
                                             required
                                             className="form-control"
                                             value={this.state.date}
@@ -133,12 +185,12 @@ componentDidMount() {
                                         <label htmlFor="time">Time</label>
                                         <input
                                             type="time"
+
                                             required
                                             className="form-control"
                                             value={this.state.time}
                                             onChange={this.handleFieldChange}
                                             id="time"
-
                                         />
                                     </div>
                                     <div className="form-group">
@@ -171,8 +223,9 @@ componentDidMount() {
 
                         </ModalBody>
                         <ModalFooter>
-                            <Button type="submit" color="primary" onClick={this.updatedShot}>Submit</Button>
-{/* need to change onclick here above*/}
+                            <Button type="submit" color="primary"
+                            onClick={this.updateExistingShot}>Submit</Button>
+
                             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
                         </ModalFooter>
                     </Modal>
