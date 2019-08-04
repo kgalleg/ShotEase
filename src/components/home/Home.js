@@ -21,11 +21,11 @@ export default class Home extends Component {
                 <div >
  <div><img src ={Logoorange} className="icon--orange" alt="orangelogo"/></div>
             <div className ="button-area">
-                <Link to="/shot"><Button className="home-button"  size="lg">Log a Shot!</Button></Link>
+                <Link to="/shot"><button className="home-button"  size="lg">Log a Shot!</button></Link>
 
                 <div><img src ={Syringe} className="icon--syringe" alt="syringe"/></div>
 
-                <Link to="/history"><Button className="home-button"  size="lg">History Log!</Button></Link>
+                <Link to="/history"><button className="home-button"  size="lg">History Log!</button></Link>
             </div>
             </div>
             </React.Fragment>

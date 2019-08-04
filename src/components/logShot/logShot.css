@@ -17,6 +17,7 @@ margin-right: auto;
   /* position: fixed; */
   z-index: -1;
   /* background-size: cover; */
+  border-radius:  20px;
 }
 
 
@@ -45,6 +46,16 @@ margin-right: auto;
   display: block;
 }
 
+.clickOnMe {
+  width: auto;
+  height: auto;
+text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  color: #505050;
+}
+
 /* .testingimage {
   position: absolute;
 } */
@@ -59,9 +70,9 @@ margin-right: auto;
 
 .abdomen {
   position: absolute;
-  top: 260px;
+  top: 300px;
   left: 389px;
-  padding: 100px 120px 190px 40px;
+  padding: 150px 120px 150px 40px;
   /* border: 10px solid red; */
   display: inline-block;
   /* z-index: 1; */
@@ -70,7 +81,7 @@ margin-right: auto;
 
 .backOfLeftArm {
   position: absolute;
-  top: 159px;
+  top: 200px;
   left: 629px;
   padding: 100px 150px 124px 80px;
   /* border: 10px solid green; */
@@ -78,7 +89,7 @@ margin-right: auto;
 
 .backOfRightArm {
   position: absolute;
-  top: 159px;
+  top: 200px;
   left: 80px;
   padding: 100px 150px 124px 80px;
   /* border: 10px solid lightgreen */
@@ -86,7 +97,7 @@ margin-right: auto;
 
 .backOfRightHip {
   position: absolute;
-  top: 404px;
+  top: 450px;
   left: 75px;
   padding: 100px 150px 124px 80px;
   /* border: 10px solid hotpink; */
@@ -94,7 +105,7 @@ margin-right: auto;
 
 .backOfLeftHip {
   position: absolute;
-  top: 404px;
+  top: 450px;
   left: 650px;
   padding: 100px 150px 125px 80px;
   /* border: 10px solid lightpink */
@@ -103,7 +114,7 @@ margin-right: auto;
 
 .rightThigh {
   position: absolute;
-  top: 650px;
+  top: 696px;
   left: 135px;
   padding: 100px 150px 125px 80px;
   /* border: 10px solid lightskyblue; */
@@ -111,7 +122,7 @@ margin-right: auto;
 
 .leftThigh {
   position: absolute;
-  top: 650px;
+  top: 696px;
   left: 580px;
   padding: 100px 150px 124px 80px;
   /* border: 10px solid blue; */
@@ -125,6 +136,30 @@ margin-right: auto;
   display: flex;
   justify-content: space-around;
 }
+
+.logMyShot {
+  background-color: #3E758A;
+      width: 150px;
+      height: 40px;
+      border-radius: 6px;
+/* font-size: 22px; */
+      color: white;
+
+
+
+  }
+
+  .cancelMyShot {
+    background-color: #DD6359;
+        width: 100px;
+        height: 40px;
+        border-radius: 6px;
+  /* font-size: 22px; */
+        color: white;
+
+
+
+    }
 
 
 

@@ -174,9 +174,9 @@ export default class LogShotModalCard extends Component {
 
                         </ModalBody>
                         <ModalFooter>
-                            <Button color="primary" onClick={this.constructNewShot}>Log my Shot!</Button>
+                            <button className="logMyShot" onClick={this.constructNewShot}>Log my Shot!</button>
 {/* need to change onclick here above*/}
-                            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                            <button className="cancelMyShot" onClick={this.toggle}>Cancel</button>
                         </ModalFooter>
                     </Modal>
                 </div>

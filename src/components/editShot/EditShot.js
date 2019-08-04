@@ -30,6 +30,7 @@ class EditShot extends Component {
 
 
     updateExistingShot = evt => {
+        console.log(this.props)
         // if (this.state.shotSite === "" || this.state.date === "") {
         //     window.alert("Please fill out all fields!");
         // } else
@@ -53,12 +54,13 @@ class EditShot extends Component {
         // Create the shot and redirect user to home or wherever I add here
         this.props.updatedShot(editedShot)
             //  .then(() => this.props.history.push(`/history/${this.props.match.params.singleShotId}/edit`))
-            // this.toggle()
+            this.toggle()
         }
 
 
 myProps = this.props.singleShot
 componentDidMount() {
+    console.log(this.props)
     if (this.props.singleShot !== undefined){
     console.log(this.props.singleShot)
     console.log("The edit component has mounted")

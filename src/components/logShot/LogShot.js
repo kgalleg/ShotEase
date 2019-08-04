@@ -13,6 +13,7 @@ export default class LogShot extends Component {
             <div className="WholeBody">
 
             <img src ={Logo} className="image--mainLogo" alt="main logo"/>
+            <p className="clickOnMe">Click on the area where you would like to log your shot below.</p>
             <img src ={WholeBody} className="image--body" alt="whole body"/>
 
 

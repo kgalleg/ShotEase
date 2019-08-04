@@ -50,7 +50,7 @@ export default class HistoryCard extends Component {
             >
               Edit
             </Button> */}
-            <EditShot key={this.props.singleShot} singleShot={this.props.singleShot}/>
+            <EditShot key={this.props.singleShot} singleShot={this.props.singleShot} updatedShot={this.props.updatedShot}/>
 
             <button
               type="button"
