@@ -69,42 +69,12 @@
     {
       "shotAreaId": "",
       "shotSiteId": "",
-      "medication": "",
-      "notes": "",
-      "date": "",
-      "time": "12:59",
+      "medication": "Novolog",
+      "notes": "its almost 8pm",
+      "date": "2019-08-14",
+      "time": "00:33",
       "userId": 1,
       "id": 15
-    },
-    {
-      "shotAreaId": "",
-      "shotSiteId": "3",
-      "medication": "",
-      "notes": "",
-      "date": "2019-08-01",
-      "time": "14:15",
-      "userId": 1,
-      "id": 16
-    },
-    {
-      "shotAreaId": "",
-      "shotSiteId": "",
-      "medication": "",
-      "notes": "",
-      "date": "",
-      "time": "13:12",
-      "userId": 1,
-      "id": 17
-    },
-    {
-      "shotAreaId": "",
-      "shotSiteId": "4",
-      "medication": "",
-      "notes": "",
-      "date": "2019-08-05",
-      "time": "13:33",
-      "userId": 1,
-      "id": 18
     }
   ],
   "shotArea": [

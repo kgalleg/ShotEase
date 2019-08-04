@@ -26,10 +26,10 @@ export default class HistoryCard extends Component {
       <div key={this.props.singleShot.id} className="history-card">
         <div className="card-body-history">
 
-            <section className="mySection">
-              <div className="myHeader">
-              <CardHeader> <img src ={SyringeBlue} className="syringeBlue" alt="syringe"/></CardHeader>
-            </div>
+            {/* <section className="mySection"> */}
+              {/* <div > */}
+              <div className="myHeader"> <img src ={SyringeBlue} className="syringeBlue" alt="syringe"/></div>
+            {/* </div> */}
 
 
 
@@ -51,6 +51,7 @@ export default class HistoryCard extends Component {
               Edit
             </Button> */}
             <EditShot key={this.props.singleShot} singleShot={this.props.singleShot}/>
+
             <button
               type="button"
               className="deleteButton myButton"
@@ -61,8 +62,9 @@ export default class HistoryCard extends Component {
               Delete
             </button>
 
+
           </div>
-          </section>
+          {/* </section> */}
         </div>
       </div>
     );
