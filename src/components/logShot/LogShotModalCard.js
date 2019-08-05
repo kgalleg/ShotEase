@@ -51,6 +51,7 @@ export default class LogShotModalCard extends Component {
   };
 
   render() {
+
     return (
       <section className="ShotSiteLocation">
         <div>
@@ -157,7 +158,6 @@ export default class LogShotModalCard extends Component {
                     <label htmlFor="Notes">Notes</label>
                     <textarea
                       type="text"
-                      required
                       className="form-control"
                       onChange={this.handleFieldChange}
                       id="notes"
@@ -169,6 +169,7 @@ export default class LogShotModalCard extends Component {
               </React.Fragment>
             </ModalBody>
             <ModalFooter>
+
               <button className="logMyShot" onClick={this.constructNewShot}>
                 Log my Shot!
               </button>

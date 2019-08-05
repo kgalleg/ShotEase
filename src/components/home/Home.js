@@ -15,7 +15,7 @@ export default class Home extends Component {
           </div>
           <div className="button-area">
             <Link to="/shot">
-              <button className="home-button" size="lg">
+              <button className="home-button">
                 Log a Shot!
               </button>
             </Link>
@@ -25,7 +25,7 @@ export default class Home extends Component {
             </div>
 
             <Link to="/history">
-              <button className="home-button" size="lg">
+              <button className="home-button">
                 History Log!
               </button>
             </Link>

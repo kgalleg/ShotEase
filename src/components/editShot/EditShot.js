@@ -34,7 +34,6 @@ class EditShot extends Component {
       // modal: false,
       id: this.props.singleShot.id,
       shotAreaId: this.state.shotAreaId,
-
       shotSiteId: this.state.shotSiteId,
       medication: this.state.medication,
       notes: this.state.notes,
