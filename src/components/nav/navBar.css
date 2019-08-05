@@ -5,25 +5,24 @@
             </li> */
 
 .navbar {
- background-Color:#A5D3CD;
-/* margin-bottom: 100px */
-            }
+  background-color: #a5d3cd;
+  /* margin-bottom: 100px */
+}
 
 .nav-link {
-    /* color: #DD6359 */
-    color: #3e758a;
-    font-weight: bold;
-    float: right
-
+  /* color: #DD6359 */
+  color: #3e758a;
+  font-weight: bold;
+  float: right;
 }
 
 .body {
-    background-Color: #F5F0E2
+  background-color: #f5f0e2;
 }
 
 .icon--shot {
-    width: 90px;
-    height: auto
+  width: 90px;
+  height: auto;
 }
 
 /* .nav {

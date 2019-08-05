@@ -7,13 +7,17 @@
 
 
 .icon--orange {
+    border-radius:  20px;
     width: 1245px;
     height: auto;
     display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
-  padding-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  /* padding-top: 20px;
+  padding-bottom: 50px; */
+
 }
 
 /* .home {
@@ -42,5 +46,13 @@
 }
 
 .home-button {
-    color: #3E758A;
-}
+    background-color: #3E758A;
+        width: 200px;
+        height: 60px;
+        border-radius: 10px;
+font-size: 22px;
+        color: white;
+
+
+
+    }

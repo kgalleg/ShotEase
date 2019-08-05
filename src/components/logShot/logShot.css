@@ -1,9 +1,8 @@
 .WholeBody {
   position: absolute;
-margin-left: 16%;
-margin-right: auto;
+  margin-left: 16%;
+  margin-right: auto;
 }
-
 
 .image--body {
   width: auto;
@@ -13,12 +12,12 @@ margin-right: auto;
   margin-right: auto; */
   position: relative;
   /* //absolute works on position */
-/* justify-content: center; */
+  /* justify-content: center; */
   /* position: fixed; */
   z-index: -1;
   /* background-size: cover; */
+  border-radius: 20px;
 }
-
 
 /* .image--body {
   position: absolute;
@@ -27,7 +26,6 @@ margin-right: auto;
   margin-top: -50px;
   margin-left: -100px;
 } */
-
 
 /* .WholeBody {
   position: absolute;
@@ -45,32 +43,41 @@ margin-right: auto;
   display: block;
 }
 
+.clickOnMe {
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  color: #505050;
+}
+
 /* .testingimage {
   position: absolute;
 } */
 
-
 /* //this styles all the images inside the modal */
 .imageofbodypart {
-  width: 450px;
+  width: 400px;
   height: auto;
-  padding-left: 17px;
+  /* padding-left: 17px; */
+  border-radius: 20px;
 }
 
 .abdomen {
   position: absolute;
-  top: 260px;
+  top: 300px;
   left: 389px;
-  padding: 100px 120px 190px 40px;
+  padding: 150px 120px 150px 40px;
   /* border: 10px solid red; */
   display: inline-block;
   /* z-index: 1; */
-
 }
 
 .backOfLeftArm {
   position: absolute;
-  top: 159px;
+  top: 200px;
   left: 629px;
   padding: 100px 150px 124px 80px;
   /* border: 10px solid green; */
@@ -78,7 +85,7 @@ margin-right: auto;
 
 .backOfRightArm {
   position: absolute;
-  top: 159px;
+  top: 200px;
   left: 80px;
   padding: 100px 150px 124px 80px;
   /* border: 10px solid lightgreen */
@@ -86,7 +93,7 @@ margin-right: auto;
 
 .backOfRightHip {
   position: absolute;
-  top: 404px;
+  top: 450px;
   left: 75px;
   padding: 100px 150px 124px 80px;
   /* border: 10px solid hotpink; */
@@ -94,7 +101,7 @@ margin-right: auto;
 
 .backOfLeftHip {
   position: absolute;
-  top: 404px;
+  top: 450px;
   left: 650px;
   padding: 100px 150px 125px 80px;
   /* border: 10px solid lightpink */
@@ -103,7 +110,7 @@ margin-right: auto;
 
 .rightThigh {
   position: absolute;
-  top: 650px;
+  top: 696px;
   left: 135px;
   padding: 100px 150px 125px 80px;
   /* border: 10px solid lightskyblue; */
@@ -111,7 +118,7 @@ margin-right: auto;
 
 .leftThigh {
   position: absolute;
-  top: 650px;
+  top: 696px;
   left: 580px;
   padding: 100px 150px 124px 80px;
   /* border: 10px solid blue; */
@@ -126,5 +133,26 @@ margin-right: auto;
   justify-content: space-around;
 }
 
+.logMyShot {
+  background-color: #3e758a;
+  width: 150px;
+  height: 40px;
+  border-radius: 6px;
+  /* font-size: 22px; */
+  color: white;
+}
 
+.cancelMyShot {
+  background-color: #dd6359;
+  width: 100px;
+  height: 40px;
+  border-radius: 6px;
+  /* font-size: 22px; */
+  color: white;
+}
 
+.addOneShot {
+  width: 250px;
+  margin-left: 10px;
+}
+/* or add margin to image */

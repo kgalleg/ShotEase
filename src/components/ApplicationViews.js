@@ -27,9 +27,9 @@ class ApplicationViews extends Component {
 
                  APIManager.all("user")
       .then(users => (newState.user = users))
-      .then(() => APIManager.all("oneShot"))
+      .then(() => APIManager.getExpand("oneShot", "shotArea"))
       .then(oneShots => (newState.oneShot = oneShots))
-      .then(() => APIManager.all("shotArea"))
+      .then(() => APIManager.all("shotAreas"))
       .then(shotAreas => (newState.shotArea = shotAreas))
       .then(() => APIManager.all("shotSite"))
       .then(shotSites => (newState.shotSite = shotSites))
