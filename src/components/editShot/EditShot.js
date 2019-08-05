@@ -16,9 +16,6 @@ class EditShot extends Component {
         notes: "",
         date: "",
         time: "",
-
-        // shotAreaId:"",
-        // shotSiteId:"",
         userId: +(sessionStorage.getItem("credentials"))
     }
      // Update state whenever an input field is edited
@@ -40,13 +37,12 @@ class EditShot extends Component {
             // modal: false,
             id: this.props.singleShot.id,
             shotAreaId: this.state.shotAreaId,
+
             shotSiteId: this.state.shotSiteId,
             medication: this.state.medication,
             notes: this.state.notes,
             date: this.state.date,
             time: this.state.time,
-            // shotAreaId:parseInt(this.state.shotAreaId),
-            // shotSiteId:parseInt(this.state.shotSiteId),
             userId: +(sessionStorage.getItem("credentials"))
 
         };
@@ -67,14 +63,13 @@ componentDidMount() {
     APIManager.get("oneShot", this.props.singleShot.id)
         .then(oneShot => {
             this.setState({
+
             shotAreaId: oneShot.shotAreaId,
             shotSiteId: oneShot.shotSiteId,
             medication: oneShot.medication,
             notes: oneShot.notes,
             date: oneShot.date,
             time: oneShot.time,
-            // shotAreaId:parseInt(oneShot.shotAreaId),
-            // shotSiteId:parseInt(oneShot.shotSiteId),
             // userId: +(sessionStorage.getItem("credentials"))
             });
         });

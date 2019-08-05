@@ -8,14 +8,13 @@ export default class LogShotModalCard extends Component {
 
     state = {
         // modal: false,
-        shotAreaId: "",
+        shotAreaId: this.props.shotArea.id,
         shotSiteId: "",
         medication: "",
         notes: "",
         date: "",
         time: "",
-        // shotAreaId:"",
-        // shotSiteId:"",
+
         userId: +(sessionStorage.getItem("credentials"))
     }
      // Update state whenever an input field is edited
@@ -40,8 +39,6 @@ export default class LogShotModalCard extends Component {
             notes: this.state.notes,
             date: this.state.date,
             time: this.state.time,
-            // shotAreaId:parseInt(this.state.shotAreaId),
-            // shotSiteId:parseInt(this.state.shotSiteId),
             userId: +(sessionStorage.getItem("credentials"))
 
         };
@@ -73,8 +70,8 @@ export default class LogShotModalCard extends Component {
                            <div className="testingimage"> <img src ={this.props.shotArea.imagePath} className="imageofbodypart" alt="bodypart"/> </div>
                                 <form className="addOneShot">
 
-
-                                    <div className="form-group">
+                                    <h3>{this.props.shotArea.nameOfArea}</h3>
+                                    {/* <div className="form-group">
                                         <label htmlFor="shotArea">Shot Area</label>
                                         <select
                                         // defaultValue=""
@@ -86,19 +83,19 @@ export default class LogShotModalCard extends Component {
                                             // disabled
                                         >
                                         <option value="">Select shot area</option>
-                                        {this.props.shotAreas.map(s => (
+                                        {this.props.shotArea.map(s => (
                                           <option key={s.id} id={s.id} {...this.props} value = {s.id}>
                                               {s.nameOfArea}
 
                                           </option>
                                         ))}
                                         </select>
-                                    </div>
+                                    </div> */}
 
 
 
                                     <div className="form-group">
-                                        <label htmlFor="shotSite">Shot Site</label>
+                                        <label htmlFor="shotSite"> </label>
                                         <select
                                             defaultValue=""
                                             required

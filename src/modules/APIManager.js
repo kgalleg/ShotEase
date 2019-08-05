@@ -79,12 +79,12 @@ export default Object.create(null, {
   //     e.json()
   //   )
   // },
-  getExpand(resource, expand) {
-    return fetch(`${remoteURL}/${resource}?_expand=${expand}`).then(data => data.json());
+  getExpand(resource, expand, id) {
+    return fetch(`${remoteURL}/${resource}?_expand=${expand}/${id}`).then(data => data.json());
   },
 
 });
 
-
+// http://localhost:5002/oneShot?_expand=shotArea
 
 

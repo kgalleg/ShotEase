@@ -57,12 +57,12 @@
       "id": 14
     },
     {
-      "shotAreaId": "6",
-      "shotSiteId": "",
-      "medication": "",
-      "notes": "",
-      "date": "",
-      "time": "",
+      "shotAreaId": 1,
+      "shotSiteId": "3",
+      "medication": "Novolog",
+      "notes": "This hurt! ",
+      "date": "2019-08-28",
+      "time": "18:00",
       "userId": 1,
       "id": 15
     }
