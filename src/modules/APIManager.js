@@ -4,20 +4,20 @@ const remoteURL = "http://localhost:5002";
 export default Object.create(null, {
   //get entry
   get: {
-    value: function (resource, id) {
+    value: function(resource, id) {
       return fetch(`${remoteURL}/${resource}/${id}`).then(e => e.json());
     }
-    },
+  },
   //get all entries
   all: {
-    value: function (resource) {
+    value: function(resource) {
       return fetch(`${remoteURL}/${resource}`).then(e => e.json());
     }
   },
 
   //delete entry
   delete: {
-    value: function (resource, id) {
+    value: function(resource, id) {
       return fetch(`${remoteURL}/${resource}/${id}`, {
         method: "DELETE"
       }).then(e => e.json());
@@ -26,7 +26,7 @@ export default Object.create(null, {
 
   //add entry
   post: {
-    value: function (resource, newObject) {
+    value: function(resource, newObject) {
       return fetch(`${remoteURL}/${resource}`, {
         method: "POST",
         headers: {
@@ -38,7 +38,7 @@ export default Object.create(null, {
   },
 
   removeAndList: {
-    value: function (resource, id) {
+    value: function(resource, id) {
       return fetch(`${remoteURL}/${resource}/${id}`, {
         method: "DELETE"
       })
@@ -48,9 +48,17 @@ export default Object.create(null, {
     }
   },
 
+  getExpand: {
+    value: function(resource, expand){
+    return fetch(`${remoteURL}/${resource}?_expand=${expand}`).then(
+      data => data.json()
+    )
+  }
+  },
+
   //edit entry
   put: {
-    value: function (resource, editedThing) {
+    value: function(resource, editedThing) {
       return fetch(`${remoteURL}/${resource}/${editedThing.id}`, {
         method: "PUT",
         headers: {
@@ -67,24 +75,9 @@ export default Object.create(null, {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(obj)
-    }).then(data => data.json())
-  },
-  // searchUP(username, password) {
-  //   return fetch(
-  //     `${remoteURL}/user?userName=${username}&password=${password}`
-  //   ).then(e => e.json())
-  // },
-  // searchUsername(username) {
-  //   return fetch(`${remoteURL}/user?userName=${username}`).then(e =>
-  //     e.json()
-  //   )
-  // },
-  getExpand(resource, expand, id) {
-    return fetch(`${remoteURL}/${resource}?_expand=${expand}/${id}`).then(data => data.json());
+    }).then(data => data.json());
   },
 
 });
 
 // http://localhost:5002/oneShot?_expand=shotArea
-
-

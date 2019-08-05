@@ -30,7 +30,7 @@
       "id": 12,
       "shotAreaId": "2",
       "shotSiteId": "1",
-      "medication": "Tresiba",
+      "medication": "Novolog",
       "notes": "",
       "date": "2019-08-06",
       "time": "10:00",
@@ -47,16 +47,6 @@
       "id": 13
     },
     {
-      "shotAreaId": "",
-      "shotSiteId": "2",
-      "medication": "",
-      "notes": "",
-      "date": "",
-      "time": "",
-      "userId": 1,
-      "id": 14
-    },
-    {
       "shotAreaId": 1,
       "shotSiteId": "3",
       "medication": "Novolog",
@@ -67,7 +57,7 @@
       "id": 15
     }
   ],
-  "shotArea": [
+  "shotAreas": [
     {
       "id": 1,
       "name": "abdomen",
