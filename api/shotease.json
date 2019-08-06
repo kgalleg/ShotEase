@@ -33,64 +33,44 @@
   ],
   "oneShot": [
     {
-      "id": 15,
-      "shotAreaId": 1,
-      "shotSiteId": "3",
-      "medication": "Humalog",
-      "notes": "hello",
-      "date": "2019-08-28",
-      "time": "18:00",
-      "userId": 1
-    },
-    {
-      "shotAreaId": 6,
-      "shotSiteId": "4",
-      "medication": "Novolog",
-      "notes": "",
-      "date": "2019-08-20",
-      "time": "14:33",
-      "userId": 1,
-      "id": 16
-    },
-    {
+      "id": 19,
       "shotAreaId": 1,
       "shotSiteId": "2",
       "medication": "Novolog",
-      "notes": "Hey!!!! It's almost 4pm",
+      "notes": "its tuesday",
       "date": "2019-08-13",
       "time": "",
-      "userId": 1,
-      "id": 19
-    },
-    {
-      "id": 23,
-      "shotAreaId": 3,
-      "shotSiteId": "4",
-      "medication": "Novolog",
-      "notes": "",
-      "date": "2019-08-15",
-      "time": "13:12",
       "userId": 1
     },
     {
-      "shotAreaId": 6,
+      "id": 20,
+      "shotAreaId": 3,
       "shotSiteId": "",
       "medication": "",
-      "notes": "hello?",
+      "notes": "please work",
       "date": "",
       "time": "",
-      "userId": 1,
-      "id": 24
+      "userId": 1
     },
     {
-      "shotAreaId": 5,
+      "shotAreaId": 3,
       "shotSiteId": "",
       "medication": "",
-      "notes": "hey",
+      "notes": "",
       "date": "",
       "time": "",
       "userId": 1,
-      "id": 25
+      "id": 21
+    },
+    {
+      "shotAreaId": 1,
+      "shotSiteId": "",
+      "medication": "Novolog",
+      "notes": "Hey this hurt!",
+      "date": "2019-08-07",
+      "time": "14:30",
+      "userId": 1,
+      "id": 22
     }
   ],
   "shotAreas": [

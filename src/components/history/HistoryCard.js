@@ -21,7 +21,7 @@ export default class HistoryCard extends Component {
             <div className="card-title-history">
             <p><strong>Date:</strong> {this.props.singleShot.date}</p>
               <p><strong>Shot Area: </strong>{this.props.singleShot.shotArea.nameOfArea}</p>
-              {/* <p>Shot Area Id: {this.props.singleShot.shotAreaId}</p> */}
+              
               {/* <Link className="nav-link" to={this.props.article.url}>Article Link</Link> */}
               <p><strong>Shot Site:</strong> {this.props.singleShot.shotSiteId}</p>
               <p><strong>Medication:</strong> {this.props.singleShot.medication}</p>
@@ -40,7 +40,7 @@ export default class HistoryCard extends Component {
                 key={this.props.singleShot}
                 singleShot={this.props.singleShot}
                 updatedShot={this.props.updatedShot}
-                shotAreas={this.props.singleShot.shotAreas}
+                shotAreas={this.props.shotArea}
               />
 
               <button
