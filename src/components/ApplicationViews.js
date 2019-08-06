@@ -70,7 +70,7 @@ class ApplicationViews extends Component {
       .then(oneShot => {
         console.log(oneShot);
         this.setState({
-          oneShot: oneShot
+          oneShot: oneShot 
         });
       });
   };
