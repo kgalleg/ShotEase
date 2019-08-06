@@ -37,7 +37,7 @@
       "shotAreaId": 1,
       "shotSiteId": "3",
       "medication": "Novolog",
-      "notes": "This hurt! ",
+      "notes": "work",
       "date": "2019-08-28",
       "time": "18:00",
       "userId": 1
@@ -53,26 +53,6 @@
       "id": 16
     },
     {
-      "id": 17,
-      "shotAreaId": 6,
-      "shotSiteId": "1",
-      "medication": "",
-      "notes": "",
-      "date": "",
-      "time": "",
-      "userId": 1
-    },
-    {
-      "shotAreaId": 7,
-      "shotSiteId": "4",
-      "medication": "",
-      "notes": "do you work?",
-      "date": "",
-      "time": "",
-      "userId": 1,
-      "id": 18
-    },
-    {
       "shotAreaId": 1,
       "shotSiteId": "2",
       "medication": "Novolog",
@@ -83,44 +63,34 @@
       "id": 19
     },
     {
-      "id": 20,
-      "shotAreaId": 3,
-      "shotSiteId": "",
-      "medication": "rrrr",
-      "notes": ">>>>>>",
-      "date": "",
-      "time": "",
-      "userId": 1
-    },
-    {
-      "shotAreaId": 7,
-      "shotSiteId": "",
-      "medication": "",
-      "notes": "",
-      "date": "",
-      "time": "",
-      "userId": 1,
-      "id": 21
-    },
-    {
-      "shotAreaId": 1,
-      "shotSiteId": "",
-      "medication": "",
-      "notes": "",
-      "date": "",
-      "time": "",
-      "userId": 1,
-      "id": 22
-    },
-    {
+      "id": 23,
       "shotAreaId": 3,
       "shotSiteId": "4",
       "medication": "Novolog",
-      "notes": "please work",
+      "notes": "",
       "date": "2019-08-15",
       "time": "13:12",
+      "userId": 1
+    },
+    {
+      "shotAreaId": 6,
+      "shotSiteId": "",
+      "medication": "",
+      "notes": "hello?",
+      "date": "",
+      "time": "",
       "userId": 1,
-      "id": 23
+      "id": 24
+    },
+    {
+      "shotAreaId": 5,
+      "shotSiteId": "",
+      "medication": "",
+      "notes": "hey",
+      "date": "",
+      "time": "",
+      "userId": 1,
+      "id": 25
     }
   ],
   "shotAreas": [

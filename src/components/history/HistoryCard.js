@@ -5,6 +5,7 @@ import EditShot from "../editShot/EditShot";
 
 export default class HistoryCard extends Component {
   render() {
+    console.log("singleShot history card", this.props.singleShot)
     return (
       <React.Fragment>
         <div key={this.props.singleShot.id} className="history-card">
@@ -39,7 +40,7 @@ export default class HistoryCard extends Component {
                 key={this.props.singleShot}
                 singleShot={this.props.singleShot}
                 updatedShot={this.props.updatedShot}
-                shotAreas={this.props.shotAreas}
+                shotAreas={this.props.singleShot.shotAreas}
               />
 
               <button

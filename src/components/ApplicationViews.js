@@ -26,8 +26,8 @@ class ApplicationViews extends Component {
 
     APIManager.all("user")
       .then(users => (newState.user = users))
-    //   .then(() => APIManager.all("oneShot"))
-    //   .then(oneShots => (newState.oneShot = oneShots))
+      .then(() => APIManager.all("oneShot"))
+      .then(oneShots => (newState.oneShot = oneShots))
       .then(() => APIManager.getExpand("oneShot", "shotArea"))
       .then(oneShots => (newState.oneShot = oneShots))
       .then(() => APIManager.all("shotAreas"))
@@ -66,7 +66,7 @@ class ApplicationViews extends Component {
 
   updatedShot = editedTaskObject => {
     return APIManager.put("oneShot", editedTaskObject)
-      .then(() => APIManager.all("oneShot"))
+      .then(() => APIManager.getExpand("oneShot", "shotArea"))
       .then(oneShot => {
         console.log(oneShot);
         this.setState({
@@ -178,7 +178,7 @@ class ApplicationViews extends Component {
             );
           }}
         />{" "}
-        */}
+
         <Route path="/login" component={Login} />
       </React.Fragment>
     );

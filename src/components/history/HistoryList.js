@@ -4,6 +4,7 @@ import Logo from "./Logo.png";
 
 export default class HistoryList extends Component {
   render() {
+    console.log("oneShot", this.props.oneShot)
     return (
       <React.Fragment>
         <div>

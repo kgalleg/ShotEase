@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import "../logShot/logShot.css"
 import "../history/historycard.css";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import { withRouter } from "react-router";
 import APIManager from "../../modules/APIManager";
 
@@ -55,7 +55,6 @@ class EditShot extends Component {
       console.log(this.props.singleShot);
       console.log("The edit component has mounted");
       APIManager.get("oneShot", this.props.singleShot.id)
-        // APIManager.getExpand("oneShot", "shotArea", this.props.singleShot.id)
         .then(oneShot => {
           this.setState({
             shotAreaId: oneShot.shotAreaId,
