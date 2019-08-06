@@ -61,6 +61,16 @@
       "time": "",
       "userId": 1,
       "id": 21
+    },
+    {
+      "shotAreaId": 1,
+      "shotSiteId": "",
+      "medication": "Novolog",
+      "notes": "Hey this hurt!",
+      "date": "2019-08-07",
+      "time": "14:30",
+      "userId": 1,
+      "id": 22
     }
   ],
   "shotAreas": [

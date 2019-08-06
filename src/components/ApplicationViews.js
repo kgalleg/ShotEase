@@ -41,14 +41,14 @@ class ApplicationViews extends Component {
 
   componentWillUpdate() {
     if (this.state.activeUser === "") {
-      let user = sessionStorage.getItem("userId");
+      let user = sessionStorage.getItem("credentials");
       this.setState({ activeUser: parseInt(user) });
     }
   }
 
   //this function test for authentication and user has entered the correct information
   isAuthenticated = () => {
-    if (sessionStorage.getItem("userId") !== null) {
+    if (sessionStorage.getItem("credentials") !== null) {
       return true;
     } else {
       return false;
@@ -117,15 +117,17 @@ class ApplicationViews extends Component {
         <Route
           path="/home"
           render={props => {
-            //if (this.isAuthenticated()) {
+            if (this.isAuthenticated()) {
             return <Home users={this.state.user} {...props} />;
-            //}
+            }else {
+                return <Redirect to="/login" />
+            }
           }}
         />
         <Route
           path="/history"
           render={props => {
-            //if (this.isAuthenticated()) {
+            if (this.isAuthenticated()) {
             return (
               <HistoryList
                 oneShot={this.state.oneShot}
@@ -136,14 +138,16 @@ class ApplicationViews extends Component {
                 {...props}
               />
             );
-            //}
+            }else {
+                return <Redirect to="/login" />
+            }
           }}
         />
         <Route
           path="/shot"
           render={props => {
             console.log(this.state.shotArea);
-            //if (this.isAuthenticated()) {
+            if (this.isAuthenticated()) {
             return (
               <LogShot
                 users={this.state.user}
@@ -154,7 +158,9 @@ class ApplicationViews extends Component {
                 {...props}
               />
             );
-            //}
+            }else {
+                return <Redirect to="/login" />
+            }
           }}
         />
         {/* <Route path="/shot/new" render={(props) => {
@@ -162,7 +168,7 @@ class ApplicationViews extends Component {
                     return <LogShot addShot={this.addShot} updatedShot={this.updatedShot} {...props}/>
                     //}
                 }} /> */}
-        <Route
+        {/* <Route
           exact
           path="/history/:shotId(\d+)/edit"
           render={props => {
@@ -177,7 +183,7 @@ class ApplicationViews extends Component {
               />
             );
           }}
-        />{" "}
+        />{" "} */}
 
         <Route path="/login" component={Login} />
       </React.Fragment>
