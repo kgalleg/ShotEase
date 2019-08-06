@@ -105,7 +105,7 @@ class Login extends Component {
               Remember Me
             </Label>
           </FormGroup>
-          <Button className="sign-in-button" type ="submit" onClick={this.handleLogin}>Sign in</Button>
+          <button className="sign-in-button" type ="submit" onClick={this.handleLogin}>Sign in</button>
           <br/>
 
           <Register setAuth={this.props.setAuth}/>

@@ -10,51 +10,87 @@
       "id": 2,
       "username": "blake",
       "email": "blake@me.com",
-      "password": "blake1"
+      "password": "karla1"
     },
     {
       "id": 3,
       "username": "scott",
       "email": "scott@me.com",
-      "password": "scott1"
+      "password": "karla1"
     },
     {
       "id": 4,
       "username": "adam",
       "email": "adam@me.com",
-      "password": "adam1"
+      "password": "karla1"
+    },
+    {
+      "username": "kgalleg",
+      "email": "karlasolis@me.com",
+      "password": "123",
+      "id": 5
     }
   ],
   "oneShot": [
     {
-      "id": 12,
-      "shotAreaId": "2",
-      "shotSiteId": "1",
-      "medication": "Novolog",
-      "notes": "",
-      "date": "2019-08-06",
-      "time": "10:00",
+      "id": 15,
+      "shotAreaId": 1,
+      "shotSiteId": "3",
+      "medication": "Humalog",
+      "notes": "hello",
+      "date": "2019-08-28",
+      "time": "18:00",
       "userId": 1
     },
     {
-      "shotAreaId": "4",
-      "shotSiteId": "1",
-      "medication": "",
+      "shotAreaId": 6,
+      "shotSiteId": "4",
+      "medication": "Novolog",
       "notes": "",
-      "date": "2019-08-06",
-      "time": "",
+      "date": "2019-08-20",
+      "time": "14:33",
       "userId": 1,
-      "id": 13
+      "id": 16
     },
     {
       "shotAreaId": 1,
-      "shotSiteId": "3",
+      "shotSiteId": "2",
       "medication": "Novolog",
-      "notes": "This hurt! ",
-      "date": "2019-08-28",
-      "time": "18:00",
+      "notes": "Hey!!!! It's almost 4pm",
+      "date": "2019-08-13",
+      "time": "",
       "userId": 1,
-      "id": 15
+      "id": 19
+    },
+    {
+      "id": 23,
+      "shotAreaId": 3,
+      "shotSiteId": "4",
+      "medication": "Novolog",
+      "notes": "",
+      "date": "2019-08-15",
+      "time": "13:12",
+      "userId": 1
+    },
+    {
+      "shotAreaId": 6,
+      "shotSiteId": "",
+      "medication": "",
+      "notes": "hello?",
+      "date": "",
+      "time": "",
+      "userId": 1,
+      "id": 24
+    },
+    {
+      "shotAreaId": 5,
+      "shotSiteId": "",
+      "medication": "",
+      "notes": "hey",
+      "date": "",
+      "time": "",
+      "userId": 1,
+      "id": 25
     }
   ],
   "shotAreas": [

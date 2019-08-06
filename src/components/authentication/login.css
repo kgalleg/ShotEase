@@ -11,7 +11,7 @@
 }
 
 .loginForm {
-    width: 450px;
+    width: 380px;
     display: block;
   margin-left: auto;
   margin-right: auto;
@@ -20,4 +20,71 @@
 
 .sign-in-button {
   float: right;
+  background-color: #3e758a;
+  width: 100px;
+  height: 40px;
+  border-radius: 6px;
+  /* font-size: 16px; */
+  color: white;
+
+}
+
+.emailtext{
+  margin-top: 17px;
+
+}
+
+ /* .modal-dialog {
+  max-width: 100px;
+} */
+
+.modalBodyRegister {
+  display: flex;
+  justify-content: space-around;
+  /* width:  600px; */
+}
+
+.icon--shotRegister {
+  width: 250px;
+  height: auto;
+  display: block;
+margin-left: 40px;
+margin-right: 0px;
+}
+
+.add {
+width: 300px;
+margin-right: 40px;
+}
+
+.registerButton {
+  background-color: #3e758a;
+  width: 150px;
+  height: 40px;
+  border-radius: 6px;
+  /* font-size: 22px; */
+  color: white;
+}
+
+.cancelRegisterButton {
+  background-color: #dd6359;
+  width: 100px;
+  height: 40px;
+  border-radius: 6px;
+  /* font-size: 22px; */
+  color: white;
+}
+
+.btn-link {
+  margin-top: 10px;
+  display: inline-block;
+  margin-left: -14px;
+}
+
+.linkButton {
+  /* width: 250px; */
+  height: auto;
+  display: block;
+margin-left: 0px;
+margin-right: 0px;
 }

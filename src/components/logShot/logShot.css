@@ -125,7 +125,7 @@
 }
 
 .modal-dialog {
-  min-width: 800px !important;
+  min-width: 800px;
 }
 
 .modal-body {

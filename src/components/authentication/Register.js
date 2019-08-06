@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { withRouter } from 'react-router'
 import APIManager from '../../modules/APIManager';
-
-// import './register.css'
+import "./login.css"
+import ShotEaseRegister from "./ShotEaseRegister.png"
 
 
 
@@ -94,13 +94,17 @@ class Register extends Component {
 
         return (
 
+
             <section className="createUser">
                 <div>
+                    <div className="linkButton">
                     <Button color="link" onClick={this.toggle}>Don't have an account? Sign Up!</Button>
+                    </div>
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                         <ModalHeader toggle={this.toggle}>Register</ModalHeader>
-                        <ModalBody>
+                        <ModalBody className="modalBodyRegister">
                             <React.Fragment>
+                            <div><img src ={ShotEaseRegister} className="icon--shotRegister" alt="task"/></div>
                                 <form className="add user">
 
                                     <div className="form-group">
@@ -114,6 +118,19 @@ class Register extends Component {
                                             id="username"
                                             placeholder="username"
                                         />
+
+                                    <div className="form-group emailtext">
+                                        <label htmlFor="email">Email</label>
+                                        <input
+                                            type="text"
+                                            required
+                                            className="form-control"
+                                            onChange={this.handleFieldChange}
+                                            id="email"
+                                            value={this.state.email}
+                                            placeholder="email"
+                                        />
+                                    </div>
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="password">Password</label>
@@ -127,27 +144,15 @@ class Register extends Component {
                                             placeholder="password"
                                         />
                                     </div>
-                                    <div className="form-group">
-                                        <label htmlFor="email">Email</label>
-                                        <input
-                                            type="text"
-                                            required
-                                            className="form-control"
-                                            onChange={this.handleFieldChange}
-                                            id="email"
-                                            value={this.state.email}
-                                            placeholder="email"
-                                        />
-                                    </div>
 
                                 </form>
                             </React.Fragment>
 
                         </ModalBody>
                         <ModalFooter>
-                            <Button color="primary" onClick={this.saveUser}>Register</Button>
+                            <button className="registerButton" onClick={this.saveUser}>Register</button>
 
-                            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                            <button className="cancelRegisterButton" onClick={this.toggle}>Cancel</button>
                         </ModalFooter>
                     </Modal>
                 </div>

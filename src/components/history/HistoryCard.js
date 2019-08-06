@@ -5,6 +5,7 @@ import EditShot from "../editShot/EditShot";
 
 export default class HistoryCard extends Component {
   render() {
+    console.log("singleShot history card", this.props.singleShot)
     return (
       <React.Fragment>
         <div key={this.props.singleShot.id} className="history-card">
@@ -18,13 +19,14 @@ export default class HistoryCard extends Component {
             {/* </div> */}
 
             <div className="card-title-history">
-              <p>Shot Area Name:{this.props.singleShot.shotArea.nameOfArea}</p>
-              <p>Shot Area Id: {this.props.singleShot.shotAreaId}</p>
+            <p><strong>Date:</strong> {this.props.singleShot.date}</p>
+              <p><strong>Shot Area: </strong>{this.props.singleShot.shotArea.nameOfArea}</p>
+              {/* <p>Shot Area Id: {this.props.singleShot.shotAreaId}</p> */}
               {/* <Link className="nav-link" to={this.props.article.url}>Article Link</Link> */}
-              <p>Shot Site Id: {this.props.singleShot.shotSiteId}</p>
-              <p>Medication: {this.props.singleShot.medication}</p>
-              <p>Date: {this.props.singleShot.date}</p>
-              <p>Time: {this.props.singleShot.time}</p>
+              <p><strong>Shot Site:</strong> {this.props.singleShot.shotSiteId}</p>
+              <p><strong>Medication:</strong> {this.props.singleShot.medication}</p>
+              <p><strong>Time:</strong> {this.props.singleShot.time}</p>
+              <p><strong>Notes:</strong> {this.props.singleShot.notes}</p>
               {/* <Button
               type="button"
               className="btn btn-success"
@@ -38,7 +40,7 @@ export default class HistoryCard extends Component {
                 key={this.props.singleShot}
                 singleShot={this.props.singleShot}
                 updatedShot={this.props.updatedShot}
-                shotAreas={this.props.shotAreas}
+                shotAreas={this.props.singleShot.shotAreas}
               />
 
               <button
