@@ -42,6 +42,8 @@ export default class HistoryCard extends Component {
                 updatedShot={this.props.updatedShot}
                 shotAreas={this.props.shotArea}
                 shotSites={this.props.shotSites}
+
+                shotAreas={this.props.shotAreas}
               />
 
               <button

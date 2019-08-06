@@ -34,8 +34,8 @@
   "oneShot": [
     {
       "id": 19,
-      "shotAreaId": 1,
-      "shotSiteId": "2",
+      "shotAreaId": "2",
+      "shotSiteId": "4",
       "medication": "Novolog",
       "notes": "its tuesday",
       "date": "2019-08-13",
@@ -44,7 +44,7 @@
     },
     {
       "id": 20,
-      "shotAreaId": 3,
+      "shotAreaId": "6",
       "shotSiteId": "",
       "medication": "",
       "notes": "please work",
