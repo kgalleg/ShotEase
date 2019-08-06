@@ -33,16 +33,6 @@
   ],
   "oneShot": [
     {
-      "id": 19,
-      "shotAreaId": "2",
-      "shotSiteId": "4",
-      "medication": "Novolog",
-      "notes": "its tuesday",
-      "date": "2019-08-13",
-      "time": "",
-      "userId": 1
-    },
-    {
       "id": 20,
       "shotAreaId": "6",
       "shotSiteId": "",
@@ -81,6 +71,16 @@
       "time": "",
       "userId": 1,
       "id": 23
+    },
+    {
+      "shotAreaId": 5,
+      "shotSiteId": "",
+      "medication": "",
+      "notes": "",
+      "date": "",
+      "time": "",
+      "userId": 1,
+      "id": 24
     }
   ],
   "shotAreas": [

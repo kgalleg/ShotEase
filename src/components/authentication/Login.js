@@ -30,33 +30,12 @@ class Login extends Component {
               el => el.username.toLowerCase() === this.state.username.toLowerCase() && el.password.toLowerCase() === this.state.password.toLowerCase()
           )
           if (singleUser) {
-              sessionStorage.setItem("credentials", singleUser.id)
-          }
-          this.props.history.push('/home')
-        // set user to a variable and the .find() will return the user that was found, meaning they are a registerd user
-        //
-        // let users = this.props.users.find(user => {
-        //     return user.username === this.state.username.toLowerCase() && user.password === this.state.password
-        // })
+              sessionStorage.setItem("credentials", singleUser.id);
+              this.props.history.push('/home')
+          }else {
+            window.alert("Invalid login information. Please try again or register a new account.")
+        }
 
-        // // checks that all the inputs are not empty and or if the the user enters the correct information
-        // if (this.state.username === "") {
-
-        //     alert("Please enter your username!")
-
-        // } else if (this.state.password === "") {
-        //     alert("Please enter your password!")
-        // } else if (this.state.username === "" && this.state.password === "") {
-        //     alert("Please enter your credentials!")
-        // } else if (user !== undefined) {
-
-        //     // if the user is not undefined, then set the sessionStorage.() and set the state
-        //     this.setState({ activeUser: sessionStorage.setItem("userId", user.id) })
-        //     // console.log(sessionStorage.getItem("userId"))
-        //     this.props.history.push('/login')  // go to to the homepage
-        // } else {
-        //     alert("You've entered the wrong username and/or password")
-        // }
     })
   }
 
