@@ -116,7 +116,7 @@ class EditShot extends Component {
                       id="shotAreaId"
                     />
                   </div>
-                  <div className="form-group">
+                  {/* <div className="form-group">
                     <label htmlFor="shotSite">Shot Site</label>
                     <input
                       type="text"
@@ -126,29 +126,31 @@ class EditShot extends Component {
                       onChange={this.handleFieldChange}
                       id="shotSiteId"
                     />
+                  </div> */}
+                  <div className="form-group">
+                    <label htmlFor="shotSite"> </label>
+                    <select
+                      // defaultValue=""
+                      required
+                      className="form-control"
+                      value={this.state.shotSiteId}
+                      onChange={this.handleFieldChange}
+                      id="shotSiteId"
+                      // placeholder="shot site"
+                    >
+                      <option value="">Select shot site number</option>
+                      {this.props.shotSites.map(s => (
+                        <option
+                          key={s.id}
+                          id={s.id}
+                          {...this.props}
+                          value={s.id}
+                        >
+                          {s.siteNumber}
+                        </option>
+                      ))}
+                    </select>
                   </div>
-                  {/* <div className="form-group">
-                                        <label htmlFor="shotSite">Shot Site</label>
-                                        <select
-
-
-                                            className="form-control"
-                                            value={this.state.shotSiteId}
-                                            onChange={this.handleFieldChange}
-                                            id="shotSiteId"
-                                            // placeholder="shot site"
-                                        >
-                                            <option value="">Select shot site number</option>
-                                        {this.props.shotSites.map(s => (
-                                          <option key={s.id} id={s.id} {...this.props} value = {s.id}>
-                                              {s.siteNumber}
-
-
-                                          </option>
-                                        ))}
-                                        </select>
-
-                                    </div> */}
 
                   <div className="form-group">
                     <label htmlFor="date">Date</label>
