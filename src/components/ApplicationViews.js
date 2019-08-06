@@ -57,7 +57,7 @@ class ApplicationViews extends Component {
 
   addShot = shot =>
     APIManager.post("oneShot", shot)
-      .then(() => APIManager.all("oneShot"))
+      .then(() => APIManager.getExpand("oneShot", "shotArea"))
       .then(oneShot =>
         this.setState({
           oneShot: oneShot
@@ -70,14 +70,14 @@ class ApplicationViews extends Component {
       .then(oneShot => {
         console.log(oneShot);
         this.setState({
-          oneShot: oneShot 
+          oneShot: oneShot
         });
       });
   };
 
   deleteShot = id => {
     return APIManager.delete("oneShot", id)
-      .then(() => APIManager.all("oneShot"))
+      .then(() => APIManager.getExpand("oneShot", "shotArea"))
       .then(oneShot => {
         // this.props.history.push("/history");
         this.setState({ oneShot: oneShot });
