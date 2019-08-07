@@ -52,8 +52,8 @@ class EditShot extends Component {
   componentDidMount() {
     console.log(this.props);
     if (this.props.singleShot !== undefined) {
-      console.log(this.props.singleShot);
-      console.log("The edit component has mounted");
+      // console.log(this.props.singleShot);
+      // console.log("The edit component has mounted");
       APIManager.get("oneShot", this.props.singleShot.id)
         .then(oneShot => {
           this.setState({
@@ -105,18 +105,33 @@ class EditShot extends Component {
                   />{" "}
                 </div>
                 <form className="addOneShot">
-                  <div className="form-group">
-                    <label htmlFor="shotArea">Shot Area</label>
-                    <input
-                      type="text"
-                      required
-                      className="form-control"
-                      value={this.state.shotAreaId}
-                      onChange={this.handleFieldChange}
-                      id="shotAreaId"
-                    />
-                  </div>
-                  <div className="form-group">
+
+
+
+                {/* <div className="form-group">
+                                        <label htmlFor="shotArea">Shot Area</label>
+                                        <select
+                                        defaultValue=""
+                                        name="shotAreaId"
+                                            className="form-control"
+                                            // value={this.state.shotArea}
+                                            onChange={this.handleFieldChange}
+                                            id="shotAreaId"
+
+                                        >
+                                        <option value="">Select shot area</option>
+                                        {this.props.shotAreas.map(s => (
+                                          <option key={s.id} id={s.id} {...this.props} value = {s.id}>
+                                              {s.nameOfArea}
+
+
+                                          </option>
+                                        ))}
+                                        </select>
+                                    </div> */}
+
+
+                  {/* <div className="form-group">
                     <label htmlFor="shotSite">Shot Site</label>
                     <input
                       type="text"
@@ -126,29 +141,67 @@ class EditShot extends Component {
                       onChange={this.handleFieldChange}
                       id="shotSiteId"
                     />
+                  </div> */}
+
+<div className="form-group">
+                    <label htmlFor="shotArea"> </label>
+                    <select
+                      // defaultValue=""
+                      required
+                      className="form-control"
+                      value={this.state.shotAreaId}
+                      onChange={this.handleFieldChange}
+                      id="shotAreaId"
+                      // placeholder="shot site"
+                    >
+                      <option value="">Select shot site number</option>
+                      {this.props.shotAreas.map(s => (
+                        <option
+                          key={s.id}
+                          id={s.id}
+                          {...this.props}
+                          value={s.id}
+                        >
+                          {s.nameOfArea}
+                        </option>
+                      ))}
+                    </select>
                   </div>
-                  {/* <div className="form-group">
-                                        <label htmlFor="shotSite">Shot Site</label>
-                                        <select
 
 
-                                            className="form-control"
-                                            value={this.state.shotSiteId}
-                                            onChange={this.handleFieldChange}
-                                            id="shotSiteId"
-                                            // placeholder="shot site"
-                                        >
-                                            <option value="">Select shot site number</option>
-                                        {this.props.shotSites.map(s => (
-                                          <option key={s.id} id={s.id} {...this.props} value = {s.id}>
-                                              {s.siteNumber}
 
 
-                                          </option>
-                                        ))}
-                                        </select>
 
-                                    </div> */}
+
+
+
+
+
+
+                  <div className="form-group">
+                    <label htmlFor="shotSite"> </label>
+                    <select
+                      // defaultValue=""
+                      required
+                      className="form-control"
+                      value={this.state.shotSiteId}
+                      onChange={this.handleFieldChange}
+                      id="shotSiteId"
+                      // placeholder="shot site"
+                    >
+                      <option value="">Select shot site number</option>
+                      {this.props.shotSites.map(s => (
+                        <option
+                          key={s.id}
+                          id={s.id}
+                          {...this.props}
+                          value={s.id}
+                        >
+                          {s.siteNumber}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
 
                   <div className="form-group">
                     <label htmlFor="date">Date</label>
