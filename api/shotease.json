@@ -29,6 +29,12 @@
       "email": "karlasolis@me.com",
       "password": "123",
       "id": 5
+    },
+    {
+      "username": "karla2",
+      "email": "karla2@me.com",
+      "password": "karla2",
+      "id": 6
     }
   ],
   "oneShot": [
@@ -37,7 +43,7 @@
       "shotAreaId": "6",
       "shotSiteId": "",
       "medication": "",
-      "notes": "please work",
+      "notes": "this is my right thigh",
       "date": "",
       "time": "",
       "userId": 1
@@ -61,6 +67,16 @@
       "time": "14:30",
       "userId": 1,
       "id": 22
+    },
+    {
+      "id": 23,
+      "shotAreaId": "1",
+      "shotSiteId": "7",
+      "medication": "Novolog",
+      "notes": "Ouch! This hurt",
+      "date": "2019-08-21",
+      "time": "14:23",
+      "userId": 6
     }
   ],
   "shotAreas": [
