@@ -165,7 +165,7 @@ class Register extends Component {
                     <div className="form-group emailtext">
                       <label htmlFor="email">Email</label>
                       <input
-                        type="text"
+                        type="email"
                         required
                         className="form-control"
                         onChange={this.handleFieldChange}

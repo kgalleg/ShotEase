@@ -61,26 +61,6 @@
       "time": "14:30",
       "userId": 1,
       "id": 22
-    },
-    {
-      "shotAreaId": 7,
-      "shotSiteId": "",
-      "medication": "",
-      "notes": "",
-      "date": "",
-      "time": "",
-      "userId": 1,
-      "id": 23
-    },
-    {
-      "shotAreaId": 5,
-      "shotSiteId": "",
-      "medication": "",
-      "notes": "",
-      "date": "",
-      "time": "",
-      "userId": 1,
-      "id": 24
     }
   ],
   "shotAreas": [
