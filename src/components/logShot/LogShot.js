@@ -8,13 +8,20 @@ export default class LogShot extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="WholeBody">
+<div>
+  <div className="outsideBody">
+        <div className="WholeBody"></div>
           <img src={Logo} className="image--mainLogo" alt="main logo" />
           <p className="clickOnMe">
             Click on the area where you would like to log your shot below.
           </p>
-          <img src={WholeBody} className="image--body" alt="whole body" />
+          <div className="wrapper"><img src={WholeBody} className="image--body" alt="whole body" /></div>
 
+          <div className="mydiviviviv ">where are ou</div>
+
+
+
+</div>
           <section className="images">
             {this.props.shotAreas.map(shotArea => (
               <LogShotModalCard
@@ -23,8 +30,11 @@ export default class LogShot extends Component {
                 {...this.props}
               />
             ))}
+
           </section>
+
         </div>
+
       </React.Fragment>
     );
   }

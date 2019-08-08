@@ -1,7 +1,25 @@
+.wrapper{
+  display: inline-block;
+  position:relative;
+
+}
+
+.outsideBody {
+  position: relative;
+
+}
+
 .WholeBody {
   position: absolute;
-  margin-left: 16%;
+
   margin-right: auto;
+  width: 550px;
+  height: auto;
+  padding: 30px 0px 30px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
 }
 
 .image--body {
@@ -17,6 +35,12 @@
   z-index: -1;
   /* background-size: cover; */
   border-radius: 20px;
+  /* width: 550px; */
+  /* height: auto; */
+  /* padding: 30px 0px 30px 0px; */
+  margin-left: 25%;
+  margin-right: auto;
+  display: block;
 }
 
 /* .image--body {
@@ -70,7 +94,7 @@
   top: 300px;
   left: 389px;
   padding: 150px 120px 150px 40px;
-  /* border: 10px solid red; */
+  border: 10px solid red;
   display: inline-block;
   /* z-index: 1; */
 }
@@ -80,7 +104,7 @@
   top: 200px;
   left: 629px;
   padding: 100px 150px 124px 80px;
-  /* border: 10px solid green; */
+  border: 10px solid green;
 }
 
 .backOfRightArm {
@@ -88,7 +112,7 @@
   top: 200px;
   left: 80px;
   padding: 100px 150px 124px 80px;
-  /* border: 10px solid lightgreen */
+  border: 10px solid lightgreen
 }
 
 .backOfRightHip {
@@ -96,7 +120,7 @@
   top: 450px;
   left: 75px;
   padding: 100px 150px 124px 80px;
-  /* border: 10px solid hotpink; */
+  border: 10px solid hotpink;
 }
 
 .backOfLeftHip {
@@ -104,7 +128,7 @@
   top: 450px;
   left: 650px;
   padding: 100px 150px 125px 80px;
-  /* border: 10px solid lightpink */
+  border: 10px solid lightpink
 }
 /* padding: <padding-top> || <padding-right> || <padding-bottom> || <padding-left> */
 
@@ -113,7 +137,7 @@
   top: 696px;
   left: 135px;
   padding: 100px 150px 125px 80px;
-  /* border: 10px solid lightskyblue; */
+  border: 10px solid lightskyblue;
 }
 
 .leftThigh {
@@ -121,7 +145,7 @@
   top: 696px;
   left: 580px;
   padding: 100px 150px 124px 80px;
-  /* border: 10px solid blue; */
+  border: 10px solid blue;
 }
 
 .modal-dialog {
@@ -156,3 +180,28 @@
   margin-left: 10px;
 }
 /* or add margin to image */
+
+.Site-content {
+  flex: 1 0 auto;
+  padding: var(--space) var(--space) 0;
+  width: 100%;
+}
+
+.Site-content:after {
+  content: '\00a0';
+
+  margin-top: var(--space);
+  height:0;
+  visibility: hidden;
+}
+
+:root {
+  --space: 1.5em 0;
+  --space: 2em 0;
+}
+
+.Site {
+
+  flex-direction: column;
+  min-height: 100vh;
+}
