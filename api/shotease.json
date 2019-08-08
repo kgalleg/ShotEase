@@ -77,6 +77,16 @@
       "date": "2019-08-21",
       "time": "14:23",
       "userId": 6
+    },
+    {
+      "shotAreaId": 1,
+      "shotSiteId": "",
+      "medication": "",
+      "notes": "its Thursday",
+      "date": "",
+      "time": "",
+      "userId": 1,
+      "id": 24
     }
   ],
   "shotAreas": [

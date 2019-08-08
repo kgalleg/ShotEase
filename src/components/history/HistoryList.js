@@ -26,7 +26,7 @@ export default class HistoryList extends Component {
                 {...this.props}
               />
               //...this props is only for history... either remove it or change the oneShot={oneShot} to sigleShot {singleShot}
-            ))}
+            )).reverse()}
         </section>
       </React.Fragment>
     );
