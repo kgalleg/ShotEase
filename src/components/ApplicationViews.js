@@ -90,7 +90,7 @@ class ApplicationViews extends Component {
         <Route
           exact
           path="/"
-          render={props => {
+          render= {props => {
             // if (this.isAuthenticated()) {
             // return <Login users={this.state.user} {...props} />
             //}
@@ -101,6 +101,7 @@ class ApplicationViews extends Component {
         />
         <Route
           path="/register"
+
           render={props => {
             if (this.isAuthenticated()) {
               return (
@@ -116,6 +117,7 @@ class ApplicationViews extends Component {
         />
         <Route
           path="/home"
+
           render={props => {
             if (this.isAuthenticated()) {
             return <Home users={this.state.user} {...props} />;
@@ -185,7 +187,14 @@ class ApplicationViews extends Component {
           }}
         />{" "} */}
 
-        <Route path="/login" component={Login} />
+        {/* <Route exact path="/login" component={Login} */}
+        <Route
+        exact
+        path="/login"
+        render={props => {
+          return <Login isUserLoggedIn={this.props.isUserLoggedIn} />;
+        }}
+      />/>
       </React.Fragment>
     );
   }

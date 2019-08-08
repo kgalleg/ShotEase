@@ -4,11 +4,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./navBar.css";
 // import ShotEaseIcon from "./ShotEaseIcon.png"
 import whiteshot from "./whiteshot.png";
+import Login from "../authentication/Login"
+
 
 //how to logout? is this right?
 export default class NavBar extends Component {
   render() {
     return (
+      <div>
+   
       <nav className="navbar shadow">
         <img src={whiteshot} className="icon--shot" alt="injection" />
         <ul className="nav">
@@ -39,6 +43,7 @@ export default class NavBar extends Component {
           </li>
         </ul>
       </nav>
+      </div>
     );
   }
 }
