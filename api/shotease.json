@@ -39,26 +39,6 @@
   ],
   "oneShot": [
     {
-      "id": 20,
-      "shotAreaId": "6",
-      "shotSiteId": "",
-      "medication": "",
-      "notes": "this is my right thigh",
-      "date": "",
-      "time": "",
-      "userId": 1
-    },
-    {
-      "shotAreaId": 3,
-      "shotSiteId": "",
-      "medication": "",
-      "notes": "",
-      "date": "",
-      "time": "",
-      "userId": 1,
-      "id": 21
-    },
-    {
       "shotAreaId": 1,
       "shotSiteId": "",
       "medication": "Novolog",
@@ -79,14 +59,24 @@
       "userId": 6
     },
     {
-      "shotAreaId": 1,
-      "shotSiteId": "",
-      "medication": "",
-      "notes": "its Thursday",
-      "date": "",
-      "time": "",
-      "userId": 1,
-      "id": 24
+      "id": 25,
+      "shotAreaId": 4,
+      "shotSiteId": "2",
+      "medication": "Humalog",
+      "notes": "I don't have any notes right now!",
+      "date": "2019-08-09",
+      "time": "09:00",
+      "userId": 1
+    },
+    {
+      "id": 26,
+      "shotAreaId": "1",
+      "shotSiteId": "2",
+      "medication": "Novolog",
+      "notes": "hey!",
+      "date": "2019-08-09",
+      "time": "10:36",
+      "userId": 1
     }
   ],
   "shotAreas": [

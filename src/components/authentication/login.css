@@ -1,21 +1,20 @@
 .loginForm {
-    padding: 0 25px;
+  padding: 0 25px;
 }
 
 .icon--shot2 {
-    width: 250px;
-    height: auto;
-    display: block;
+  width: 250px;
+  height: auto;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 .loginForm {
-    width: 380px;
-    display: block;
+  width: 380px;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .sign-in-button {
@@ -26,17 +25,11 @@
   border-radius: 6px;
   /* font-size: 16px; */
   color: white;
-
 }
 
-.emailtext{
+.emailtext {
   margin-top: 17px;
-
 }
-
- /* .modal-dialog {
-  max-width: 100px;
-} */
 
 .modalBodyRegister {
   display: flex;
@@ -48,13 +41,13 @@
   width: 250px;
   height: auto;
   display: block;
-margin-left: 40px;
-margin-right: 0px;
+  margin-left: 40px;
+  margin-right: 0px;
 }
 
 .add {
-width: 300px;
-margin-right: 40px;
+  width: 300px;
+  margin-right: 40px;
 }
 
 .registerButton {
@@ -82,9 +75,8 @@ margin-right: 40px;
 }
 
 .linkButton {
-  /* width: 250px; */
   height: auto;
   display: block;
-margin-left: 0px;
-margin-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
