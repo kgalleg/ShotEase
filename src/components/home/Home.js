@@ -6,10 +6,13 @@ import "./home.css";
 
 export default class Home extends Component {
   render() {
+
     return (
       <React.Fragment>
         <div>
+        {/* <h1>`Username ${this.props.users.username}`</h1> */}
           <div>
+
             <img src={Logoorange} className="icon--orange" alt="orangelogo" />
           </div>
           <div className="button-area">
