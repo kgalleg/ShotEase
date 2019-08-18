@@ -73,7 +73,12 @@ class EditShot extends Component {
 
   toggle = () => {
     this.setState(prevState => ({
-      modal: !prevState.modal
+      modal: !prevState.modal,
+      // medication: this.state.oneShot.medication,
+      //       notes: this.state.oneShot.notes,
+      //       date: this.state.oneShot.date,
+      //       time: this.state.oneShot.time
+
     }));
   };
 
@@ -106,43 +111,6 @@ class EditShot extends Component {
                 </div>
                 <form className="addOneShot">
 
-
-
-                {/* <div className="form-group">
-                                        <label htmlFor="shotArea">Shot Area</label>
-                                        <select
-                                        defaultValue=""
-                                        name="shotAreaId"
-                                            className="form-control"
-                                            // value={this.state.shotArea}
-                                            onChange={this.handleFieldChange}
-                                            id="shotAreaId"
-
-                                        >
-                                        <option value="">Select shot area</option>
-                                        {this.props.shotAreas.map(s => (
-                                          <option key={s.id} id={s.id} {...this.props} value = {s.id}>
-                                              {s.nameOfArea}
-
-
-                                          </option>
-                                        ))}
-                                        </select>
-                                    </div> */}
-
-
-                  {/* <div className="form-group">
-                    <label htmlFor="shotSite">Shot Site</label>
-                    <input
-                      type="text"
-                      required
-                      className="form-control"
-                      value={this.state.shotSiteId}
-                      onChange={this.handleFieldChange}
-                      id="shotSiteId"
-                    />
-                  </div> */}
-
 <div className="form-group">
                     <label htmlFor="shotArea"> </label>
                     <select
@@ -167,16 +135,6 @@ class EditShot extends Component {
                       ))}
                     </select>
                   </div>
-
-
-
-
-
-
-
-
-
-
 
                   <div className="form-group">
                     <label htmlFor="shotSite"> </label>

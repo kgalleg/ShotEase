@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navBar.css";
-// import ShotEaseIcon from "./ShotEaseIcon.png"
 import whiteshot from "./whiteshot.png";
+
 
 //how to logout? is this right?
 export default class NavBar extends Component {
   render() {
+
     return (
       <nav className="navbar shadow">
         <img src={whiteshot} className="icon--shot" alt="injection" />
@@ -41,4 +42,5 @@ export default class NavBar extends Component {
       </nav>
     );
   }
+
 }

@@ -33,59 +33,12 @@ class Register extends Component {
 
   toggle = () => {
     this.setState(prevState => ({
-      modal: !prevState.modal
+      modal: !prevState.modal,
+      username:"",
+      email:"",
+      password:""
     }));
   };
-
-  //   saveUser = event => {
-  //     event.preventDefault();
-  //     const user = {
-  //       username: this.state.username,
-  //       email: this.state.email,
-  //       password: this.state.password
-  //     };
-  //     this.addUser(user).then(() => this.props.history.push("/home"));
-  //   };
-
-  // createFirstSession = () => {
-  //     let firstSession = {
-  //         userId: parseInt(sessionStorage.getItem("credentials"))
-  //     }
-  //         this.props.addSessionOnRegister(firstSession)
-  //     }
-
-  //     addSessionOnRegister = (session) => {
-  //         return APIManager.post(session, "sessions")
-  //           .then(() => APIManager.getAll("sessions"))
-  //           .then(Sessions =>
-  //             this.setState({
-  //               Sessions: Sessions
-  //             })
-  //           );
-  //       };
-
-  // saveUser = event => {
-  //     event.preventDefault()
-  //     APIManager.all("user").then((users) => {
-  //         let isMatch = users.find(el => el.username.toLowerCase() === this.state.username.toLowerCase())
-  //         if(isMatch){
-  //             window.alert("This email already exists! Please go back to login page.")
-  //         } else if(this.state.name === "" || this.state.email === "" || this.state.password === ""){
-  //             window.alert("You left a field blank!")
-  //         }
-
-  //         else {
-  //         let newUser = {
-  //        username: this.state.username,
-  //        email: this.state.email,
-  //        password: this.state.password
-  //         };
-
-  //         this.props.addUser(newUser)
-  //         .then(() => this.props.history.push('/home'))
-  //     }
-  // })
-  // }
 
   saveUser = event => {
     event.preventDefault();
@@ -161,7 +114,6 @@ class Register extends Component {
                       id="username"
                       placeholder="username"
                     />
-
                     <div className="form-group emailtext">
                       <label htmlFor="email">Email</label>
                       <input
@@ -194,7 +146,6 @@ class Register extends Component {
               <button className="registerButton" onClick={this.saveUser}>
                 Register
               </button>
-
               <button className="cancelRegisterButton" onClick={this.toggle}>
                 Cancel
               </button>
@@ -205,5 +156,4 @@ class Register extends Component {
     );
   }
 }
-
 export default withRouter(Register);
