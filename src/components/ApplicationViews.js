@@ -8,6 +8,7 @@ import Home from "./home/Home";
 import LogShot from "./logShot/LogShot";
 import HistoryList from "./history/HistoryList";
 import EditShot from "./editShot/EditShot";
+import NavBar from "./nav/NavBar";
 
 class ApplicationViews extends Component {
   isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
@@ -87,6 +88,27 @@ class ApplicationViews extends Component {
   render() {
     return (
       <React.Fragment>
+
+        <Route
+          render={props => {
+            if (this.isAuthenticated()) {
+              return (
+                <NavBar
+
+                />
+              );
+            }
+          }}
+        />
+
+
+
+
+
+
+
+
+
         <Route
           exact
           path="/"
@@ -105,7 +127,7 @@ class ApplicationViews extends Component {
             if (this.isAuthenticated()) {
               return (
                 <Register
-                  users={this.state.user}
+                  user={this.state.user}
                   addRegisteredUser={this.addRegisteredUser}
                   setAuth={this.state.setAuth}
                   {...props}

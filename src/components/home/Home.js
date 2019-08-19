@@ -11,6 +11,10 @@ export default class Home extends Component {
         <div>
           <div>
             <img src={Logoorange} className="icon--orange" alt="orangelogo" />
+            <div>
+            <h1>Welcome:{this.props.users.username}</h1>
+            </div>
+
           </div>
           <div className="button-area">
             <Link to="/shot">

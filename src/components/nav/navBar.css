@@ -4,30 +4,30 @@
                 <Link className="nav-link" to="/login">Login</Link>
             </li> */
 
-.navbar {
-  background-color: #a5d3cd;
-  /* margin-bottom: 100px */
-}
+            .navbar {
+              background-color: #a5d3cd;
+              /* margin-bottom: 100px */
+            }
 
-.nav-link {
-  /* color: #DD6359 */
-  color: #3e758a;
-  font-weight: bold;
-  float: right;
-}
+            .nav-link {
+              /* color: #DD6359 */
+              color: #3e758a;
+              font-weight: bold;
+              float: right;
+            }
 
-.body {
-  background-color: #f5f0e2;
-}
+            .body {
+              background-color: #f5f0e2;
+            }
 
-.icon--shot {
-  width: 90px;
-  height: auto;
-}
+            .icon--shot {
+              width: 90px;
+              height: auto;
+            }
 
-/* .nav {
-top: 50px;
-right: 0px;
-margin-left: 40em;
-position:
-} */
+            /* .nav {
+            top: 50px;
+            right: 0px;
+            margin-left: 40em;
+            position:
+            } */
