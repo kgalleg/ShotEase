@@ -4,6 +4,10 @@
 
 Shot ease is a simple app that will easily keep track of when and where the user injects medication on their body.  The user can log the injection site, medication, date/time and any pertinent notes they want to add to it.  By having access to the injection history log, the user will know how to rotate their injection sites in order to avoid building hard lumps or fatty deposits under the skin and increase the body's effectiveness in the absorption of their medication. ShotEase is written with the JavaScript framework, React.js.
 
+## Visualization of ShotEase
+
+![](./public/imagesForReadMe/ShotEase.gif)
+
 ## Getting Started
 To run ShotEase locally, create an empty directory and clone the project by running the following command in your terminal: ``` git@github.com:kgalleg/ShotEase.git```
 
@@ -203,12 +207,6 @@ In another window of your terminal go into the ```src/api``` folder and run: ```
 
 <!-- <img src="https://quiksite.com/wp-content/uploads/2016/09/Javascript-Square.png" alt='JS' width=60><img src="https://i7.pngguru.com/preview/686/669/171/web-development-responsive-web-design-cascading-style-sheets-html-css-thumbnail.jpg" alt='CSS3' width=50><img src="https://i7.pngguru.com/preview/753/701/295/angle-area-text-brand-other-html-5-thumbnail.jpg" alt='HTML5' width=50> -->
 
-
-
-
-## Visualization of ShotEase
-
-![](./public/imagesForReadMe/ShotEase.gif)
 
 ## Enjoy ShotEase
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
