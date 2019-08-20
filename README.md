@@ -198,8 +198,14 @@ In another window of your terminal go into the ```src/api``` folder and run: ```
 <img src="./public/imagesForReadMe/wireFrame.png" alt="Shot Ease Logo" width=400px >
 
 ## Technologies Used
-<img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-128.png" alt='React.JS' width=100><img src="https://www.schemecolor.com/wp-content/uploads/javascript-logo.png" alt='JS' width=100><img src="http://www.myiconfinder.com/uploads/iconsets/256-256-8b61de4c84033266e15317a6eb9fda2d-css3.png" alt='CSS3' width=100><img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt='HTML5' width=100>
-<img src="https://cdn.rawgit.com/npm/logos/31945b5c/npm%20square/n-64.png" alt='NPM' width=100>
+<img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-128.png" alt='React.JS' width=50>
+<img src="https://reactstrap.github.io/assets/logo.png" alt='Reactstrap' width=50>
+<img src="https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg" alt='Bootstrap' width=45>
+
+<img src="https://quiksite.com/wp-content/uploads/2016/09/Javascript-Square.png" alt='JS' width=60>
+<img src="https://i7.pngguru.com/preview/686/669/171/web-development-responsive-web-design-cascading-style-sheets-html-css-thumbnail.jpg" alt='CSS3' width=50>
+<img src="https://i7.pngguru.com/preview/753/701/295/angle-area-text-brand-other-html-5-thumbnail.jpg" alt='HTML5' width=50>
+<img src="https://cdn.rawgit.com/npm/logos/31945b5c/npm%20square/n-64.png" alt='NPM' width=45>
 
 
 
