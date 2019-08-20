@@ -8,20 +8,20 @@
     },
     {
       "id": 2,
-      "username": "blake",
-      "email": "blake@me.com",
+      "username": "ernie",
+      "email": "ernie@me.com",
       "password": "karla1"
     },
     {
       "id": 3,
-      "username": "scott",
-      "email": "scott@me.com",
+      "username": "moni",
+      "email": "moni@me.com",
       "password": "karla1"
     },
     {
       "id": 4,
-      "username": "adam",
-      "email": "adam@me.com",
+      "username": "gideon",
+      "email": "gideon@me.com",
       "password": "karla1"
     },
     {
@@ -49,23 +49,43 @@
       "userId": 6
     },
     {
-      "id": 25,
-      "shotAreaId": 4,
-      "shotSiteId": "2",
-      "medication": "Humalog",
-      "notes": "I don't have any notes right now!",
-      "date": "2019-08-09",
-      "time": "09:00",
+      "id": 29,
+      "shotAreaId": "2",
+      "shotSiteId": "6",
+      "medication": "Novolog",
+      "notes": "Ouch! Wasn't so bad!",
+      "date": "2019-08-19",
+      "time": "10:15",
       "userId": 1
     },
     {
-      "id": 26,
-      "shotAreaId": "1",
-      "shotSiteId": "2",
+      "id": 32,
+      "shotAreaId": "3",
+      "shotSiteId": "8",
+      "medication": "Humalog",
+      "notes": "It didn't hurt! :) ",
+      "date": "2019-08-19",
+      "time": "11:15",
+      "userId": 1
+    },
+    {
+      "shotAreaId": 5,
+      "shotSiteId": "4",
       "medication": "Novolog",
-      "notes": "hey!",
-      "date": "2019-08-09",
-      "time": "10:36",
+      "notes": "Hope it doesn't hurt!",
+      "date": "2019-08-19",
+      "time": "07:45",
+      "userId": 1,
+      "id": 33
+    },
+    {
+      "id": 34,
+      "shotAreaId": "2",
+      "shotSiteId": "1",
+      "medication": "Humalog",
+      "notes": "Changed it!",
+      "date": "2019-08-19",
+      "time": "10:00",
       "userId": 1
     }
   ],
