@@ -49,16 +49,6 @@
       "userId": 6
     },
     {
-      "id": 29,
-      "shotAreaId": "2",
-      "shotSiteId": "6",
-      "medication": "Novolog",
-      "notes": "Ouch! Wasn't so bad!",
-      "date": "2019-08-19",
-      "time": "10:15",
-      "userId": 1
-    },
-    {
       "id": 32,
       "shotAreaId": "3",
       "shotSiteId": "8",
@@ -86,6 +76,16 @@
       "notes": "Changed it!",
       "date": "2019-08-19",
       "time": "10:00",
+      "userId": 1
+    },
+    {
+      "id": 35,
+      "shotAreaId": "6",
+      "shotSiteId": "6",
+      "medication": "Novolog",
+      "notes": "It didn't hurt too much!",
+      "date": "2019-08-20",
+      "time": "11:00",
       "userId": 1
     }
   ],
