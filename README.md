@@ -12,7 +12,7 @@ Shot ease is a simple app that will easily keep track of when and where the user
 To run ShotEase locally, create an empty directory and clone the project by running the following command in your terminal: ``` git@github.com:kgalleg/ShotEase.git```
 
 
-ShotEase uses a database.json file to store all data. To create the database, run:
+ShotEase uses a database.json file to store all data. To create the database, cd into ShotEase/ and run:
 ```
 mkdir api
 cd api
@@ -192,9 +192,9 @@ Open **database.json** and copy the following into the file to create a database
 }
 ```
 
-Traverse back the ShotEase folder and run: ```npm install```
-This is will install all packages, libraries and their dependencies used by Take A Hike.
-Next  run the following in order to view Take A Hike in your browser: ```npm start```
+Traverse back to the ShotEase folder and run: ```npm install```
+This is will install all packages, libraries and their dependencies used by ShotEase.
+Next  run the following in order to view ShotEase in your browser: ```npm start```
 Open [http://localhost:3000]( http://localhost:3000) to view it in the browser.
 In another window of your terminal go into the ```src/api``` folder and run: ```json-server -p 5002 -w database.json```
 
